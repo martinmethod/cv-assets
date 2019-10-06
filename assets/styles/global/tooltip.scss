@@ -1,0 +1,107 @@
+// ===================================================|
+// Global: TOOLTIP
+
+// -------------------------|
+.tooltip {
+  z-index: 10000;
+
+  .desktop & {
+    display: block !important;
+  }
+
+  .mobile & {
+    display: none !important;
+  }
+
+  .tooltip-inner {
+    padding: 8px 21px;
+    font-size: 13px;
+    color: map-get($roles-col-texts, 'negative');
+    background: map-get($roles-col-backgrounds, 'tooltip');
+    border-radius: 3px;
+  }
+
+  .tooltip-arrow {
+    @include dimensions-square(0);
+
+    position: absolute;
+    z-index: 1;
+    border-color: map-get($roles-col-backgrounds, 'tooltip');
+    border-style: solid;
+  }
+
+  &[x-placement^='top'] {
+    margin-bottom: 5px;
+
+    .tooltip-arrow {
+      bottom: -5px;
+      left: calc(50% - 5px);
+      margin-top: 0;
+      margin-bottom: 0;
+      border-width: 5px 5px 0;
+      border-right-color: transparent !important;
+      border-bottom-color: transparent !important;
+      border-left-color: transparent !important;
+    }
+  }
+
+  &[x-placement^='bottom'] {
+    margin-top: 5px;
+
+    .tooltip-arrow {
+      top: -5px;
+      left: calc(50% - 5px);
+      margin-top: 0;
+      margin-bottom: 0;
+      border-width: 0 5px 5px;
+      border-top-color: transparent !important;
+      border-right-color: transparent !important;
+      border-left-color: transparent !important;
+    }
+  }
+
+  &[x-placement^='right'] {
+    margin-left: 5px;
+
+    .tooltip-arrow {
+      @include margin-h(0);
+
+      top: calc(50% - 5px);
+      left: -5px;
+      border-width: 5px 5px 5px 0;
+      border-top-color: transparent !important;
+      border-bottom-color: transparent !important;
+      border-left-color: transparent !important;
+    }
+  }
+
+  &[x-placement^='left'] {
+    margin-right: 10px;
+
+    .tooltip-arrow {
+      @include margin-h(0);
+
+      top: 50% !important;
+      right: -5px;
+      border-width: 5px 0 5px 5px;
+      border-top-color: transparent !important;
+      border-right-color: transparent !important;
+      border-bottom-color: transparent !important;
+      transform: translateY(-50%);
+    }
+  }
+
+  &[aria-hidden='true'] {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.15s, visibility 0.15s;
+  }
+
+  &[aria-hidden='false'] {
+    position: static;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.15s;
+  }
+}
