@@ -2,16 +2,15 @@
   "name": "cv-assets",
   "version": "1.0.0",
   "description": "Common assets and code for all CV projects based on my layout",
-  "author": "",
+  "author": {
+    "name": "Martin Metodiev",
+    "email": "metodiev.martin@gmail.com",
+    "url": "http://martinmetodiev.com"
+  },
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "git://github.com/martinmethod/cv-assets.git",
-    "author": {
-      "name": "Martin Metodiev",
-      "email": "metodiev.martin@gmail.com",
-      "url": "http://martinmetodiev.com"
-    }
+    "url": "git://github.com/martinmethod/cv-assets.git"
   },
   "private": true,
   "dependencies": {
