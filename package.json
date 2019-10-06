@@ -1,0 +1,26 @@
+{
+  "name": "cv-assets",
+  "version": "1.0.0",
+  "description": "Common assets and code for all CV projects based on my layout",
+  "author": "",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/martinmethod/cv-assets.git",
+    "author": {
+      "name": "Martin Metodiev",
+      "email": "metodiev.martin@gmail.com",
+      "url": "http://martinmetodiev.com"
+    }
+  },
+  "private": true,
+  "dependencies": {
+    "contentful": "^7.10.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "moment-duration-format": "^2.3.2",
+    "nuxt-i18n": "^6.2.1",
+    "nuxt-svg-loader": "^1.0.1",
+    "v-tooltip": "^2.0.2"
+  }
+}
