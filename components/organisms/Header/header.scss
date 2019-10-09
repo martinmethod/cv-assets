@@ -1,0 +1,185 @@
+// ===================================================|
+// Organisms: HEADER
+
+// -------------------------| Root
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: rem($roles-size-avatar);
+
+  @include mq-device-holding-type('inpocket') {
+    text-align: center;
+  }
+
+  @include mq-tablet-breakpoint('below') {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+// -------------------------| Cell
+.cell {
+  $width: (
+      map-get($roles-screens, 'min') - (map-get($roles-spaces-min, 'app') * 1.5)
+    ) / 2;
+
+  display: flex;
+  align-items: center;
+  width: ($width * 100%) / map-get($roles-screens, 'min');
+  height: 100%;
+
+  @include mq-device-holding-type('inpocket') {
+    flex-direction: column;
+  }
+
+  @include mq-tablet-breakpoint('below') {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.cell-content {
+  height: 94%;
+
+  @include mq-tablet-breakpoint('below') {
+    height: auto;
+  }
+
+  a {
+    @include links-header-styles();
+  }
+}
+
+// -------------------------| Subtitle
+.subtitle {
+  @include mq-device-holding-type('inpocket') {
+    line-height: map-get($roles-typo-line-heights, 'title') * 2;
+  }
+}
+
+// -------------------------| Main
+.main {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// -------------------------| Links
+.links {
+  flex: 1;
+
+  @include mq-device-holding-type('inpocket') {
+    > div {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: rem(23.4px);
+      text-align: left;
+
+      > span {
+        margin: 0 !important;
+      }
+    }
+
+    a {
+      @include padding-h(rem(13px));
+
+      font-size: rem(26px);
+
+      > i {
+        @include dimensions-square(1em);
+
+        margin: 0;
+      }
+
+      > span {
+        display: none;
+      }
+    }
+  }
+
+  @include mq-tablet-breakpoint('below') {
+    margin-top: rem(6.5px);
+
+    > div {
+      flex-direction: row;
+      justify-content: normal;
+
+      > span {
+        padding: 0;
+      }
+
+      > span:not(:last-child) {
+        margin-right: rem(13px);
+      }
+    }
+  }
+
+  > div {
+    > span {
+      padding: rem(6.5px) 0; // fix for Microsoft Edge
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+// -------------------------| Contacts
+.contacts {
+  @include mq-device-holding-type('inpocket') {
+    > div {
+      justify-content: center;
+    }
+  }
+
+  @include mq-tablet-breakpoint('below') {
+    margin-top: rem(6.5px);
+  }
+
+  svg {
+    fill: map-get($roles-col-icons, 'contacts');
+  }
+
+  > div {
+    flex-direction: row;
+    justify-content: normal;
+
+    > *:not(:first-child) {
+      margin-left: rem(13px);
+    }
+  }
+}
+
+// -------------------------| Avatar
+.avatar {
+  @include mq-device-holding-type('inpocket') {
+    top: -#{rem($roles-size-avatar - 10)} !important;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include mq-tablet-breakpoint('below') {
+    @include dimensions-square(rem($roles-size-avatar * 0.75) !important);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+// -------------------------| Print styles
+@media print {
+  .cell {
+    width: ($roles-size-print-page-width - map-get($roles-spaces-print, 'app')) /
+      2;
+  }
+}

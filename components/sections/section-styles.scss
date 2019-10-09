@@ -1,0 +1,63 @@
+// ===================================================|
+// Sections: STYLES
+
+// -------------------------| Root
+.root {
+  @include mq-device-holding-type('inpocket') {
+    text-align: center;
+  }
+}
+
+// -------------------------| Item
+.item {
+  padding: rem(13px) 0;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  + .item {
+    border-top: map-get($roles-borders-dividers, 'gray');
+  }
+}
+
+// -------------------------| More
+.more {
+  padding-top: rem(13px);
+  text-align: center;
+  user-select: none;
+  border-top: map-get($roles-borders-dividers, 'gray');
+
+  i {
+    display: none;
+  }
+
+  a {
+    display: inline-flex;
+
+    span {
+      @include dimensions-square(100%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+// -------------------------| Print styles
+@media print {
+  .more {
+    i {
+      display: block;
+    }
+
+    a {
+      display: none;
+    }
+  }
+}

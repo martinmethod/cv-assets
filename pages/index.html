@@ -1,0 +1,5 @@
+<main :class="$style.root">
+  <template v-for="section in sections">
+    <components :is="sectionComponent(section.fields.id)" :content="section.fields" />
+  </template>
+</main>

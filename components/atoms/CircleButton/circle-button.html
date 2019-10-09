@@ -1,0 +1,10 @@
+<a
+  data-btn
+  :class="[$style.root, $style[color]]"
+  :href="link"
+  :target="link ? '_blank' : null"
+  v-tooltip.left="{content: tooltip}"
+  @click="$emit('click')"
+>
+  <slot></slot>
+</a>

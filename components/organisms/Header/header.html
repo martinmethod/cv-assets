@@ -1,0 +1,18 @@
+<header :class="$style.root">
+  <div :class="$style.cell">
+    <div :class="[$style.cellContent, $style.main]">
+      <Heading :size="1" :class="$style.title">{{ fullName }}</Heading>
+      <Heading type="subtitle" :class="$style.subtitle">{{ identity.headline }}</Heading>
+      <div :class="$style.contacts">
+        <ContactGroup :items="meta" />
+      </div>
+    </div>
+  </div>
+
+  <div :class="$style.cell">
+    <div :class="[$style.cellContent, $style.links]">
+      <ContactGroup :items="links" />
+    </div>
+    <Avatar :class="$style.avatar" :src="identity.avatar" :alt="fullName" />
+  </div>
+</header>

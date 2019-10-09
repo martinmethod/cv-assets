@@ -1,0 +1,50 @@
+// ===================================================|
+// Roles: COLORS
+
+// -------------------------| Theme
+$roles-col-theme: (
+  'primary': map-get($swatch-colors-palette, 'paradiso'),
+  'primary-dark': map-get($swatch-colors-palette, 'casal'),
+  'secondary': map-get($swatch-colors-palette, 'milano-red')
+);
+
+// -------------------------| Icons
+$roles-col-icons: (
+  'contacts': map-get($swatch-colors-palette, 'milano-red'),
+  'document': map-get($swatch-colors-palette, 'milano-red'),
+  'meta': map-get($swatch-colors-mono, 'dusty-gray'),
+  'homepage': map-get($roles-col-theme, 'primary-dark')
+);
+
+// -------------------------| Text
+$roles-col-texts: (
+  'base': map-get($swatch-colors-mono, 'mine-shaft'),
+  'negative': map-get($swatch-colors-mono, 'white'),
+  'subtitle': map-get($roles-col-theme, 'primary-dark'),
+  'section': map-get($roles-col-theme, 'primary-dark'),
+  'info': map-get($swatch-colors-mono, 'dove-gray'),
+  'meta': map-get($swatch-colors-mono, 'dove-gray'),
+  'icon': map-get($swatch-colors-palette, 'supernova'),
+  'copyright': map-get($swatch-colors-mono, 'dusty-gray')
+);
+
+// -------------------------| Links
+$roles-col-links: (
+  'link': map-get($roles-col-theme, 'primary'),
+  'hover': light(map-get($roles-col-theme, 'primary'), 15%),
+  'active': map-get($roles-col-theme, 'secondary')
+);
+
+// -------------------------| Buttons
+$roles-col-buttons: (
+  'red': map-get($swatch-colors-palette, 'milano-red')
+);
+
+// -------------------------| Backgrounds
+$roles-col-backgrounds: (
+  'app': map-get($swatch-backgrounds, 'white'),
+  'tooltip': map-get($swatch-backgrounds, 'mine-shaft'),
+  'progress': map-get($swatch-backgrounds, 'pale'),
+  'info': map-get($swatch-backgrounds, 'supernova'),
+  'bar': map-get($swatch-backgrounds, 'casal')
+);

@@ -1,0 +1,45 @@
+// ===================================================|
+// Atoms: PROGRESS BAR
+
+// -------------------------| Variables
+$min-height: 24px;
+
+// -------------------------| Root
+.root {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: em($min-height);
+  padding-top: 1 / map-get($roles-ratios, 'progress-bar') * 100%;
+  pointer-events: none;
+  background-color: map-get($roles-col-backgrounds, 'progress');
+  border: map-get($roles-borders-wrappers, 'progress-bar');
+  border-radius: map-get($roles-borders-radiuses, 'progress');
+
+  > div {
+    $gap: 2px;
+
+    position: absolute;
+    top: $gap;
+    right: $gap;
+    bottom: $gap;
+    left: $gap;
+    height: calc(100% - #{$gap * 2});
+    min-height: em($min-height - (($gap + 2) * 2));
+  }
+
+  span {
+    @util truncate;
+
+    display: block;
+    height: 100%;
+    padding: 0 em(8px);
+    font-weight: map-get($roles-typo-font-weights, 'progress-bar');
+    line-height: map-get($roles-typo-line-heights, 'progress-bar');
+    color: map-get($roles-col-texts, 'negative');
+    text-align: left;
+    text-transform: uppercase;
+    background-color: map-get($roles-col-backgrounds, 'bar');
+    border-radius: map-get($roles-borders-radiuses, 'progress');
+  }
+}

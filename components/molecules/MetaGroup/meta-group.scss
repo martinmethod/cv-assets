@@ -1,0 +1,17 @@
+// ===================================================|
+// Molecules: META GROUP
+
+// -------------------------| Root
+.root {
+  display: flex;
+
+  @include mq-device-holding-type('inpocket') {
+    justify-content: center;
+  }
+
+  span {
+    &:not(:last-child) {
+      margin-right: rem(13px);
+    }
+  }
+}

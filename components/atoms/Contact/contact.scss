@@ -1,0 +1,80 @@
+// ===================================================|
+// Atoms: CONTACT
+
+// -------------------------| Root
+.root {
+  display: inline-block;
+  align-items: center;
+  font-size: 0;
+  white-space: nowrap;
+
+  span {
+    font-size: map-get($roles-typo-font-sizes, 'contact');
+    font-weight: map-get($roles-typo-font-weights, 'contact');
+  }
+}
+
+// -------------------------| Types
+.email {
+  //
+}
+
+.phone {
+  @media screen {
+    display: none;
+  }
+}
+
+.location {
+  //
+}
+
+.homepage {
+  svg {
+    fill: map-get($roles-col-icons, 'homepage');
+  }
+}
+
+.portfolio {
+  //
+}
+
+.behance {
+  svg {
+    fill: map-get($roles-col-icons, 'behance');
+  }
+}
+
+.github {
+  svg {
+    fill: map-get($roles-col-icons, 'github');
+  }
+}
+
+.linkedin {
+  svg {
+    fill: map-get($roles-col-icons, 'linkedin');
+  }
+}
+
+// -------------------------| Icon
+.icon {
+  @include dimensions-square(rem(13px));
+
+  display: inline-block;
+  margin-right: rem(4px);
+  transform: translateY(rem(2.6px));
+}
+
+// -------------------------| Print value
+.print-value {
+  display: none;
+
+  @media print {
+    display: inline;
+
+    + .value {
+      display: none;
+    }
+  }
+}

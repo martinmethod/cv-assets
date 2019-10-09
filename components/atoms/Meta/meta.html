@@ -1,0 +1,5 @@
+<span :class="[$style.root, $style[type]]" v-tooltip.right="{ content: tooltip }">
+  <Icon v-if="icon" :src="icon" :class="$style.icon" />
+  <slot></slot>
+  <i v-if="tooltip && addon && addon === 'finished'" :class="$style.addon">({{ tooltip }})</i>
+</span>

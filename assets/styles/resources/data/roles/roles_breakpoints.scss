@@ -1,0 +1,7 @@
+// ===================================================|
+// Roles: BREAKPOINTS
+
+$roles-breakpoints: (
+  'text': map-get($swatch-breakpoints, 'm'),
+  'tight-height': map-get($swatch-breakpoints, 's')
+);

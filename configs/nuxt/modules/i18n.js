@@ -18,5 +18,5 @@ export default {
     fallbackLocale: 'en'
   },
   lazy: true,
-  langDir: 'lang/'
+  langDir: 'node_modules/cv-assets/lang/'
 };

@@ -1,0 +1,23 @@
+// ===================================================|
+// Molecules: PROGRESS
+
+// -------------------------| Root
+.root {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+
+  h3 {
+    flex: 1;
+    margin-bottom: 0 !important;
+
+    @include mq-device-holding-type('inpocket') {
+      text-align: left;
+    }
+  }
+
+  > div {
+    width: em(200px);
+    margin-left: 1rem;
+  }
+}
