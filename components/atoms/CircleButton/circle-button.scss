@@ -1,0 +1,32 @@
+// ===================================================|
+// Atoms: CIRCLE BUTTON
+
+// -------------------------| Variables
+$size: 28px;
+$radius: map-get($swatch-border-radiuses, 'circle');
+
+// -------------------------| Root
+.root {
+  @include dimensions-square(rem($size));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: map-get($roles-borders-wrappers, 'circle-button');
+  border-radius: $radius;
+
+  svg {
+    @include dimensions-square(rem($size/2));
+
+    fill: currentColor;
+  }
+}
+
+// -------------------------| Colors
+.blue {
+  @include link-styles-generator();
+}
+
+.red {
+  @include button-links-styles();
+}

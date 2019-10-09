@@ -1,0 +1,7 @@
+// ===================================================|
+// Roles: SCREENS
+
+$roles-screens: (
+  'min': map-get($swatch-screens, 'screen-320'),
+  'max': map-get($swatch-screens, 'screen-1280')
+);

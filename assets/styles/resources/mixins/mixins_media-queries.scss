@@ -1,0 +1,99 @@
+//====================================================|
+// Mixins: MEDIA QUERIES
+
+// -------------------------| Variables
+$bp-xxxl: map-get($swatch-breakpoints, 'xxxl');
+$bp-xxl: map-get($swatch-breakpoints, 'xxl');
+$bp-xl: map-get($swatch-breakpoints, 'xl');
+$bp-l: map-get($swatch-breakpoints, 'l');
+$bp-m: map-get($swatch-breakpoints, 'm');
+$bp-s: map-get($swatch-breakpoints, 's');
+$bp-xs: map-get($swatch-breakpoints, 'xs');
+
+// -------------------------| Pocket device or not    ( 320px <-> 575px   /   576px <-> 1920px )
+@mixin mq-device-holding-type($type) {
+  @if $type == 'inpocket' {
+    @media screen and (max-width: $bp-xs - 1) {
+      @content;
+    }
+  } @else if $type == 'outpocket' {
+    @media screen and (min-width: $bp-xs) {
+      @content;
+    }
+  }
+}
+
+// -------------------------| Mobile screen or not    ( 320px <-> 991px   /   992px <-> 1920px )
+@mixin mq-screen-size-type($type) {
+  @if $type == 'mobile' {
+    @media screen and (max-width: $bp-m - 1) {
+      @content;
+    }
+  } @else if $type == 'desktop' {
+    @media screen and (min-width: $bp-m) {
+      @content;
+    }
+  }
+}
+
+// -------------------------| Above tablet or not    ( 320px <-> 767px   /   768px <-> 1920px )
+@mixin mq-tablet-breakpoint($type) {
+  @if $type == 'below' {
+    @media screen and (max-width: $bp-s - 1) {
+      @content;
+    }
+  } @else if $type == 'above' {
+    @media (min-width: $bp-s) {
+      @content;
+    }
+  }
+}
+
+// -------------------------| XS
+@mixin mq-xs() {
+  @media screen and (min-width: $bp-xs) {
+    @content;
+  }
+}
+
+// -------------------------| S
+@mixin mq-s() {
+  @media (min-width: $bp-s) {
+    @content;
+  }
+}
+
+// -------------------------| M
+@mixin mq-m() {
+  @media screen and (min-width: $bp-m) {
+    @content;
+  }
+}
+
+// -------------------------| L
+@mixin mq-l() {
+  @media screen and (min-width: $bp-l) {
+    @content;
+  }
+}
+
+// -------------------------| XL
+@mixin mq-xl() {
+  @media screen and (min-width: $bp-xl) {
+    @content;
+  }
+}
+
+// -------------------------| XXL
+@mixin mq-xxl() {
+  @media screen and (min-width: $bp-xxl) {
+    @content;
+  }
+}
+
+// -------------------------| XXXL
+@mixin mq-xxxl() {
+  @media screen and (min-width: $bp-xxxl) {
+    @content;
+  }
+}

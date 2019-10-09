@@ -1,0 +1,63 @@
+//====================================================|
+// Mixins: LINKS
+
+// -------------------------| Header links
+@mixin links-header-styles() {
+  color: map-get($roles-col-texts, 'base');
+
+  @media (hover: hover) {
+    &:hover:not(:active) {
+      color: map-get($roles-col-links, 'hover');
+    }
+  }
+
+  &:active {
+    color: map-get($roles-col-links, 'active');
+  }
+}
+
+// -------------------------| Tag links
+@mixin link-styles-generator() {
+  color: map-get($roles-col-links, 'link');
+  transform: translate3d(0, 0, 0); // fix visual glitch in Safari
+
+  @media (hover: hover) {
+    &:hover:not(:active) {
+      color: map-get($roles-col-texts, 'negative');
+      background-color: map-get($roles-col-links, 'hover');
+      border-radius: 1px;
+      box-shadow: 0 0 0 0.2rem map-get($roles-col-links, 'hover');
+    }
+  }
+
+  &:active {
+    color: map-get($roles-col-texts, 'negative');
+    background-color: map-get($roles-col-links, 'active');
+    border-radius: 1px;
+    box-shadow: 0 0 0 0.2rem map-get($roles-col-links, 'active');
+  }
+}
+
+// -------------------------| Button links
+@mixin button-links-styles() {
+  $col-value: map-get($roles-col-buttons, 'red');
+
+  color: $col-value;
+  transform: translate3d(0, 0, 0); // fix visual glitch in Safari
+
+  @media (hover: hover) {
+    &:hover:not(:active) {
+      color: map-get($roles-col-texts, 'negative');
+      background-color: $col-value;
+      border-radius: 1px;
+      box-shadow: 0 0 0 0.2rem $col-value;
+    }
+  }
+
+  &:active {
+    color: map-get($roles-col-texts, 'negative');
+    background-color: dark($col-value, 15%);
+    border-radius: 1px;
+    box-shadow: 0 0 0 0.2rem dark($col-value, 15%);
+  }
+}

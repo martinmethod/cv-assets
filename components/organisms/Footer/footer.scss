@@ -1,0 +1,14 @@
+// ===================================================|
+// Organisms: FOOTER
+
+// -------------------------| Root
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+
+  > *:not(:last-child) {
+    margin-bottom: rem(map-get($roles-spaces-min, 'atoms'));
+  }
+}

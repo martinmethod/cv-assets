@@ -1,0 +1,46 @@
+// ===================================================|
+// Pages: INDEX
+
+// -------------------------| Root
+.root {
+  @include scaler(
+    column-gap,
+    map-get($roles-spaces-min, 'app'),
+    map-get($roles-spaces-max, 'app')
+  );
+
+  column-count: 2;
+  margin-bottom: rem(map-get($roles-spaces-min, 'organisms') * 2);
+
+  @include mq-tablet-breakpoint('below') {
+    column-gap: normal;
+    column-count: auto;
+  }
+
+  > section {
+    display: inline-block;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: rem(36px);
+    }
+  }
+
+  a:not([data-btn]) {
+    @include link-styles-generator();
+  }
+}
+
+// -------------------------| Print styles
+@media print {
+  $gap: map-get($roles-spaces-print, 'app');
+
+  .root {
+    flex: 1;
+    column-gap: $gap;
+
+    > section:not(:last-child) {
+      margin-bottom: rem(24px);
+    }
+  }
+}

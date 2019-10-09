@@ -1,0 +1,41 @@
+// ===================================================|
+// General: PRINT STYLES
+
+// -------------------------| Page
+@page {
+  $gutter: map-get($roles-spaces-print, 'app');
+
+  size: A4;
+  margin: $gutter $gutter $gutter/2;
+}
+
+// -------------------------| Document
+@media print {
+  html,
+  body {
+    width: $roles-size-print-page-width;
+    height: $roles-size-print-page-height;
+  }
+
+  html {
+    font-size: 9px;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  [id='root'] {
+    width: initial;
+    min-height: initial;
+    background: initial;
+    border: initial;
+    border-radius: initial;
+    box-shadow: initial;
+    page-break-after: always;
+  }
+
+  a {
+    color: map-get($roles-col-texts, 'base') !important;
+  }
+}

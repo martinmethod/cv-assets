@@ -1,0 +1,32 @@
+// ===================================================|
+// Molecules: TAG GROUP
+
+// -------------------------| Root
+.root {
+  //
+}
+
+// -------------------------| Group
+.group {
+  $margin: rem(5.07px);
+
+  margin-bottom: -$margin;
+  font-size: 0;
+
+  > span {
+    margin-bottom: $margin;
+    font-size: map-get($roles-typo-font-sizes, 'body');
+
+    &:not(:last-child) {
+      margin-right: $margin;
+    }
+  }
+
+  p {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: rem(6.5px);
+    }
+  }
+}

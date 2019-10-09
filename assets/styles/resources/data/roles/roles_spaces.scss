@@ -1,0 +1,17 @@
+// ===================================================|
+// Roles: SPACES
+
+$roles-spaces-print: (
+  'app': 16mm
+);
+
+$roles-spaces-min: (
+  'app': map-get($swatch-spaces, '20'),
+  'atoms': map-get($swatch-spaces, '10'),
+  'molecules': map-get($swatch-spaces, '15'),
+  'organisms': map-get($swatch-spaces, '40')
+);
+
+$roles-spaces-max: (
+  'app': map-get($roles-spaces-min, 'app') * map-get($roles-ratios, 'space')
+);

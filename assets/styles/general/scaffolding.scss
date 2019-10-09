@@ -1,0 +1,54 @@
+// ===================================================|
+// General: SCAFFOLDING
+
+// -------------------------| Box model
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// -------------------------| Document
+html {
+  $min-font-size: map-get($roles-typo-font-sizes-base, 'min');
+  $max-font-size: map-get($roles-typo-font-sizes-base, 'max');
+
+  @include scaler(font-size, $min-font-size, $max-font-size);
+}
+
+body {
+  @include font-smoothing();
+
+  -webkit-tap-highlight-color: rgba(map-get($swatch-colors-mono, 'black'), 0);
+  color: map-get($roles-col-texts, 'base');
+  font-feature-settings: 'ss01';
+
+  * {
+    @include selection(light(map-get($roles-col-theme, 'primary'), 66%));
+  }
+}
+
+// -------------------------| Text
+strong {
+  font-weight: map-get($swatch-font-weights, 'bold');
+}
+
+// -------------------------| Links
+a {
+  text-decoration: none;
+  cursor: pointer;
+
+  .desktop & {
+    transition: all map-get($roles-transitions, 'link') ease-in-out;
+  }
+}
+
+// -------------------------| Images
+img {
+  pointer-events: none;
+}
+
+// -------------------------| Graphics
+svg {
+  overflow: initial; // fix for Safari where part of the graphics is being cropped in the bottom
+}

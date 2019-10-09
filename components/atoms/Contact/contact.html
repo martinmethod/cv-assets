@@ -1,0 +1,7 @@
+<span :class="[$style.root, $style[id]]">
+  <component :is="wrapper" :href="link" :target="link && (link.indexOf('//') !== -1 ? '_blank' : false)">
+    <Icon :class="$style.icon" :src="icon" />
+    <span v-if="printValue" :class="$style.printValue">{{ printValue }}</span>
+    <span :class="$style.value">{{ value }}</span>
+  </component>
+</span>

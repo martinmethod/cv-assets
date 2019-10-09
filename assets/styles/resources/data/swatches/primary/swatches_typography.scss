@@ -1,0 +1,39 @@
+// ===================================================|
+// Swatches: TYPOGRAPHY
+
+// -------------------------| Font families
+$swatch-font-families: (
+  'cv-sans': 'cv-sans, sans-serif'
+);
+
+// -------------------------| Font sizes
+$swatch-typo-font-sizes: (
+  '10': rem(10),
+  '11': rem(11),
+  '13': rem(13),
+  '15': rem(15),
+  '20': rem(20),
+  '28': rem(28),
+  '32': rem(32)
+);
+
+// -------------------------| Font weights
+$swatch-font-weights: (
+  'hairline': 100,
+  'thin': 200,
+  'light': 300,
+  'regular': 400,
+  'medium': 500,
+  'semibold': 600,
+  'bold': 700,
+  'black': 800,
+  'heavy': 900
+);
+
+// -------------------------| Line-heights
+$swatch-line-heights: (
+  'normal': normal,
+  '100%': 1,
+  '130%': 1.3,
+  '170%': 1.7
+);

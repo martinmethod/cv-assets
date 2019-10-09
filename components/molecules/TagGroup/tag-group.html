@@ -1,0 +1,6 @@
+<div :class="$style.root">
+  <Heading v-if="data.title" :size="3" type="item">{{ data.title }}</Heading>
+  <div :class="$style.group">
+    <Tag v-for="(item, index) in data.items" :key="index" :data="item.fields" />
+  </div>
+</div>

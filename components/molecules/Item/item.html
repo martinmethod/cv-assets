@@ -1,0 +1,38 @@
+<div :class="[$style.root, {[$style.document]: data.file, [$style.i]: data.tooltip, }]">
+  <div v-if="data.tooltip" :class="$style.relBox">
+    <div :class="$style.info"><span v-tooltip.bottom="{ content: data.tooltip }">i</span></div>
+  </div>
+  <div v-if="data.file" :class="$style.relBox">
+    <span :class="$style.file">
+      <CircleButton color="red" :link="data.file" :tooltip="$t('openPDF')">
+        <FileSVG />
+      </CircleButton>
+    </span>
+  </div>
+  <Heading :size="3" type="item">
+    <component
+      :is="headingWrapper(data.titleUrl)"
+      :href="data.titleUrl"
+      :target="data.titleUrl && (data.titleUrl.indexOf('//') !== -1 ? '_blank' : null)"
+    >
+      <span>{{ data.title }}</span>
+    </component>
+  </Heading>
+  <Heading :size="4" type="info">
+    <component
+      :is="headingWrapper(data.subtitleUrl)"
+      :href="data.subtitleUrl"
+      :target="data.subtitleUrl && (data.subtitleUrl.indexOf('//') !== -1 ? '_blank' : null)"
+    >
+      {{ data.subtitle }}
+    </component>
+  </Heading>
+  <MetaGroup :items="data.details" />
+  <div v-if="data.text" :class="$style.details">
+    <Paragraph>
+      <p v-for="(text, i) in data.text" :key="i">
+        {{ text }}
+      </p>
+    </Paragraph>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+// ===================================================|
+// Atoms: META
+
+// -------------------------| Root
+.root {
+  display: flex;
+  align-items: center;
+  font-size: map-get($roles-typo-font-sizes, 'meta');
+  font-weight: map-get($roles-typo-font-weights, 'meta');
+  color: map-get($roles-col-texts, 'meta');
+  white-space: nowrap;
+  cursor: default;
+
+  i {
+    margin-left: rem(2.6px);
+  }
+}
+
+// -------------------------| Addon
+.addon {
+  display: none;
+  font-weight: map-get($roles-typo-font-weights, 'body');
+}
+
+// -------------------------| Icons
+.icon {
+  @include dimensions-square(rem(10.4px));
+
+  margin-right: rem(2.6px);
+  transform: translateY(rem(-1px));
+
+  svg {
+    fill: map-get($roles-col-icons, 'meta');
+  }
+}
+
+// -------------------------| Types
+.phone {
+  display: none;
+}
+
+// -------------------------| Print styles
+@media print {
+  .addon {
+    display: inline-block;
+  }
+
+  .icon {
+    transform: translateY(0);
+  }
+
+  .phone {
+    display: flex;
+  }
+}

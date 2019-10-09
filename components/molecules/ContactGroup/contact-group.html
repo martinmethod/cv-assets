@@ -1,0 +1,10 @@
+<div :class="$style.root">
+  <Contact v-for="item in items"
+    :key="item.id"
+    :id="item.id"
+    :icon="item.icon"
+    :value="item.value"
+    :printValue="item.printValue"
+    :link="item.link"
+  />
+</div>

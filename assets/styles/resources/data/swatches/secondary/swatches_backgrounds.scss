@@ -1,0 +1,11 @@
+// ===================================================|
+// Swatches: BACKGROUNDS
+
+$swatch-backgrounds: (
+  'white': map-get($swatch-colors-mono, 'white'),
+  'casal': map-get($swatch-colors-palette, 'casal'),
+  'supernova': map-get($swatch-colors-palette, 'supernova'),
+  'mine-shaft': map-get($swatch-colors-mono, 'mine-shaft'),
+  'pale': map-get($swatch-colors-mono, 'pale'),
+  'alto': map-get($swatch-colors-mono, 'alto')
+);

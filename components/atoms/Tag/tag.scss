@@ -1,0 +1,29 @@
+// ===================================================|
+// Atoms: TAG
+
+// -------------------------| Root
+.root {
+  display: inline-block;
+  max-width: 100%;
+  cursor: default;
+
+  > * {
+    @util truncate;
+
+    display: block;
+    padding: rem(1.3px) rem(4px);
+    border: map-get($roles-borders-wrappers, 'tag');
+    border-radius: map-get($roles-borders-radiuses, 'tag');
+  }
+}
+
+// -------------------------| Tooltip label
+.tooltip-label {
+  margin: 0;
+}
+
+// -------------------------| Progress bar
+.progress-bar {
+  margin-top: rem(5px);
+  font-size: rem(6.24px);
+}

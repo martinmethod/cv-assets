@@ -1,0 +1,13 @@
+<div :class="$style.root">
+  <CircleButton
+    :class="$style.root"
+    v-for="lang in languages"
+    v-tooltip.right="{
+    content: `${$t('switchLang')} ${tooltipLabel(lang.code)}`
+  }"
+    :key="lang.code"
+    @click="changeLang(lang.code)"
+  >
+    {{ lang.code }}
+  </CircleButton>
+</div>

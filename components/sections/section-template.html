@@ -1,0 +1,19 @@
+<Section :class="$style.root" :heading="content.name" :tooltip="titleTooltip">
+  <template v-if="items.actual && items.old">
+    <div :class="$style.item" v-for="item in items.actual">
+      <component :is="component" :data="item" />
+    </div>
+    <div v-if="visibleOld" :class="$style.item" v-for="item in items.old">
+      <component :is="component" :data="item" />
+    </div>
+    <div :class="$style.more" v-if="!visibleOld && items.old.length > 0">
+      <CircleButton @click="showOldItems">
+        <span v-tooltip.top="{ content: moreTooltip }">+{{ items.old.length }}</span>
+      </CircleButton>
+      <i v-if="moreTooltip">{{ moreTooltip }}</i>
+    </div>
+  </template>
+  <div v-else :class="$style.item" v-for="item in items">
+    <component :is="component" :data="item" />
+  </div>
+</Section>

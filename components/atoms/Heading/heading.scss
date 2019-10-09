@@ -1,0 +1,76 @@
+// ===================================================|
+// Atoms: HEADING
+
+// -------------------------| Root
+.root {
+  margin: 0 0 rem(13px);
+  cursor: auto;
+
+  i {
+    display: none;
+    margin-bottom: rem(6.5px);
+    font-size: map-get($roles-typo-font-sizes, 'body');
+    font-weight: map-get($roles-typo-font-weights, 'info');
+    color: map-get($roles-col-texts, 'meta');
+  }
+}
+
+// -------------------------| Types
+$heading-types: 'title' 'subtitle' 'section' 'item' 'info';
+
+@each $heading in $heading-types {
+  .#{$heading} {
+    font-size: map-get($roles-typo-font-sizes, $heading);
+    font-weight: map-get($roles-typo-font-weights, $heading);
+  }
+}
+
+.title {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin: 0;
+  color: map-get($roles-col-texts, 'subtitle');
+}
+
+.section {
+  margin-bottom: rem(13px);
+  //font-variant: small-caps;
+  color: map-get($roles-col-texts, 'section');
+  white-space: nowrap;
+  border-bottom: map-get($roles-borders-underlines, 'title');
+}
+
+.item {
+  margin: 0;
+
+  &:not(:last-child) {
+    margin-bottom: rem(4px);
+  }
+}
+
+.info {
+  margin-bottom: rem(6.5px);
+  color: map-get($roles-col-texts, 'info');
+}
+
+// -------------------------| Print styles
+@media print {
+  .root {
+    i {
+      display: block;
+    }
+  }
+
+  .section {
+    border-bottom-width: 1px;
+  }
+
+  .info {
+    a {
+      color: map-get($roles-col-texts, 'info') !important;
+    }
+  }
+}

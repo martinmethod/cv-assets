@@ -1,0 +1,11 @@
+<section :class="$style.root">
+  <div>
+    <Heading :class="$style.heading" :size="2" type="section">
+      <span v-tooltip.right="{ content: tooltip }">{{ heading }}</span>
+      <i v-if="tooltip">({{ tooltip }})</i>
+    </Heading>
+  </div>
+  <div :class="$style.content">
+    <slot></slot>
+  </div>
+</section>

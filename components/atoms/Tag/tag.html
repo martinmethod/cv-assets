@@ -1,0 +1,22 @@
+<span :class="$style.root">
+  <component
+    :is="wrapper"
+    :href="data.website"
+    :target="data.website ? '_blank' : null"
+  >
+    <template v-if="data.description || data.experience">
+      <v-popover offset="5" placement="top" trigger="hover">
+        <span>{{ data.name }}</span>
+        <template slot="popover">
+          <p :class="$style.tooltipLabel">{{ data.description }}</p>
+          <div :class="$style.progressBar" v-if="data.experience">
+            <ProgressBar :level="data.experience" :label="data.label" />
+          </div>
+        </template>
+      </v-popover>
+    </template>
+    <template v-else>
+      {{ data.name }}
+    </template>
+  </component>
+</span>
