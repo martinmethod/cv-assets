@@ -8,7 +8,7 @@ import Item from '@/node_modules/cv-assets/components/molecules/Item';
 import {
   formatDate,
   formatDuration
-} from '@/node_modules/cv-assets/services/MomentService';
+} from '@/node_modules/cv-assets/services/FormatService';
 import { checkPeriod } from '@/node_modules/cv-assets/services/PeriodService';
 
 // Graphics

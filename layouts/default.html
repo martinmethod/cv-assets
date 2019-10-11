@@ -1,0 +1,18 @@
+<div :class="$style.root">
+  <CircleButton
+    color="red"
+    :class="$style.pdf"
+    :link="pdf"
+    :tooltip="$t('download')"
+  >
+    <FileSVG />
+  </CircleButton>
+  <LangSwitcher
+    v-if="locales.length > 1"
+    :class="$style.language"
+    :languages="languages"
+  />
+  <Header />
+  <nuxt />
+  <Footer />
+</div>

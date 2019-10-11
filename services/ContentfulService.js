@@ -1,4 +1,4 @@
-import apiClient from '~/node_modules/cv-assets/configs/api/contentful';
+import apiClient from '~/node_modules/cv-assets/config/api/contentful';
 
 // -------------------------| Get content
 export const getContent = (params) =>
