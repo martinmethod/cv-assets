@@ -1,0 +1,94 @@
+// ===================================================|
+// Layouts: DEFAULT
+
+// -------------------------| Root
+.root {
+  @include scaler(
+    padding-left,
+    map-get($roles-spaces-min, 'app'),
+    map-get($roles-spaces-max, 'app')
+  );
+  @include scaler(
+    padding-right,
+    map-get($roles-spaces-min, 'app'),
+    map-get($roles-spaces-max, 'app')
+  );
+  @include padding-v(rem(40px));
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: map-get($roles-screens, 'max');
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: map-get($roles-col-backgrounds, 'app');
+
+  @include mq-device-holding-type('inpocket') {
+    padding-top: calc(#{rem($roles-size-avatar)} + #{rem(15px)});
+  }
+
+  header {
+    margin-bottom: rem(42px);
+  }
+}
+
+// -------------------------| Icons
+.language,
+.pdf {
+  @include mq-tablet-breakpoint('below') {
+    position: absolute;
+    top: rem(6px);
+  }
+
+  @include mq-tablet-breakpoint('above') {
+    position: fixed;
+    top: rem(50px);
+    left: rem(10px);
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+.pdf {
+  @include mq-tablet-breakpoint('below') {
+    @include scaler(
+      left,
+      map-get($roles-spaces-min, 'app'),
+      map-get($roles-spaces-max, 'app')
+    );
+
+    transform: translateX(10%);
+  }
+
+  @include mq-tablet-breakpoint('above') {
+    transform: translateY(136%);
+  }
+}
+
+.language {
+  @include mq-tablet-breakpoint('below') {
+    @include scaler(
+      right,
+      map-get($roles-spaces-min, 'app'),
+      map-get($roles-spaces-max, 'app')
+    );
+
+    transform: translateX(-10%);
+  }
+}
+
+// -------------------------| Print styles
+@media print {
+  .root {
+    padding: 0;
+
+    footer {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
