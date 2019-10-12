@@ -4,7 +4,7 @@ import experience from './Experience';
 import languages from './Languages';
 import mostProudOf from './MostProudOf';
 import references from './References';
-import skills from './Skills';
+import skillsStack from './Skills';
 import strengths from './Strengths';
 import technologiesAndTools from './Tools';
 
@@ -15,7 +15,7 @@ export default {
   languages,
   mostProudOf,
   references,
-  skills,
+  skillsStack,
   strengths,
   technologiesAndTools
 };
