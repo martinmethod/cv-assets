@@ -10,7 +10,7 @@
   </div>
 
   <div :class="$style.cell">
-    <div :class="[$style.cellContent, $style.links]">
+    <div v-if="links.length > 0" :class="[$style.cellContent, $style.links]">
       <ContactGroup :items="links" />
     </div>
     <Avatar :class="$style.avatar" :src="identity.avatar" :alt="fullName" />

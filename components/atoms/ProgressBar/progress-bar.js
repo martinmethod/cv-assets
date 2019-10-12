@@ -8,8 +8,8 @@ export default {
       required: true
     },
     label: {
-      type: String,
-      required: true
+      type: [String, null],
+      default: null
     }
   }
 };

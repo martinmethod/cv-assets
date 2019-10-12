@@ -112,6 +112,7 @@ export default {
           title: name,
           titleUrl: link,
           subtitle: relation,
+          file: document ? document.fields.file.url : null,
           details: [
             {
               type: 'phone',

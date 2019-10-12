@@ -26,20 +26,20 @@ $min-height: 24px;
     left: $gap;
     height: calc(100% - #{$gap * 2});
     min-height: em($min-height - (($gap + 2) * 2));
-  }
 
-  span {
-    @util truncate;
+    > span {
+      @util truncate;
 
-    display: block;
-    height: 100%;
-    padding: 0 em(8px);
-    font-weight: map-get($roles-typo-font-weights, 'progress-bar');
-    line-height: map-get($roles-typo-line-heights, 'progress-bar');
-    color: map-get($roles-col-texts, 'negative');
-    text-align: left;
-    text-transform: uppercase;
-    background-color: map-get($roles-col-backgrounds, 'bar');
-    border-radius: map-get($roles-borders-radiuses, 'progress');
+      display: block;
+      height: 100%;
+      padding: 0 em(8px);
+      font-weight: map-get($roles-typo-font-weights, 'progress-bar');
+      line-height: map-get($roles-typo-line-heights, 'progress-bar');
+      color: map-get($roles-col-texts, 'negative');
+      text-align: left;
+      text-transform: uppercase;
+      background-color: map-get($roles-col-backgrounds, 'bar');
+      border-radius: map-get($roles-borders-radiuses, 'progress');
+    }
   }
 }

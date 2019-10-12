@@ -1,7 +1,7 @@
 <div :class="$style.root">
   <div>
       <span :style="{ width: `${level}%` }">
-        {{ label }}
+        <span v-if="label">{{ label }}</span>
       </span>
   </div>
 </div>

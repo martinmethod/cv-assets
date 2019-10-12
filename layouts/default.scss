@@ -23,6 +23,10 @@
   margin: 0 auto;
   background-color: map-get($roles-col-backgrounds, 'app');
 
+  @include mq-tablet-breakpoint('below') {
+    padding-top: rem(map-get($roles-spaces-max, 'app') / 1.4);
+  }
+
   @include mq-device-holding-type('inpocket') {
     padding-top: calc(#{rem($roles-size-avatar)} + #{rem(15px)});
   }
@@ -37,12 +41,12 @@
 .pdf {
   @include mq-tablet-breakpoint('below') {
     position: absolute;
-    top: rem(6px);
+    top: rem(map-get($roles-spaces-min, 'app') + 5px);
   }
 
   @include mq-tablet-breakpoint('above') {
     position: fixed;
-    top: rem(50px);
+    top: rem(48px);
     left: rem(10px);
   }
 
@@ -63,7 +67,12 @@
   }
 
   @include mq-tablet-breakpoint('above') {
-    transform: translateY(136%);
+    // Position the PDF icon aligned to the name if no language switcher
+    &:not(.first) {
+      @include mq-device-holding-type('outpocket') {
+        transform: translateY(136%);
+      }
+    }
   }
 }
 

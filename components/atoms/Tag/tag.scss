@@ -8,8 +8,6 @@
   cursor: default;
 
   > * {
-    @util truncate;
-
     display: block;
     padding: rem(1.3px) rem(4px);
     border: map-get($roles-borders-wrappers, 'tag');
