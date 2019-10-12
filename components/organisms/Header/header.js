@@ -73,17 +73,19 @@ export default {
         });
       }
 
-      this.accounts.forEach((acc) => {
-        const { id, username, url, icon } = acc.fields;
+      if (this.accounts) {
+        this.accounts.forEach((acc) => {
+          const { id, username, url, icon } = acc.fields;
 
-        links.push({
-          id,
-          icon: icon.fields.file.url,
-          value: username,
-          printValue: url.replace('https://', ''),
-          link: url
+          links.push({
+            id,
+            icon: icon.fields.file.url,
+            value: username,
+            printValue: url.replace('https://', ''),
+            link: url
+          });
         });
-      });
+      }
 
       return links;
     }
