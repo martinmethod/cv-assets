@@ -34,6 +34,7 @@
 
   i {
     display: none;
+    color: map-get($roles-col-texts, 'meta');
   }
 
   a {
