@@ -3,10 +3,14 @@
 
 // -------------------------| Root
 .root {
+  position: relative;
   margin: 0 0 rem(13px);
   cursor: auto;
 
   i {
+    @include absolute-centered-y();
+
+    right: 0;
     display: none;
     margin-bottom: rem(6.5px);
     font-size: map-get($roles-typo-font-sizes, 'body');
