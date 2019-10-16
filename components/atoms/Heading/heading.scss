@@ -3,7 +3,6 @@
 
 // -------------------------| Root
 .root {
-  position: relative;
   margin: 0 0 rem(13px);
   cursor: auto;
 
@@ -63,6 +62,8 @@ $heading-types: 'title' 'subtitle' 'section' 'item' 'info';
 // -------------------------| Print styles
 @media print {
   .root {
+    position: relative;
+
     i {
       display: block;
     }
