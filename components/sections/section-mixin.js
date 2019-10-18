@@ -1,17 +1,14 @@
 // Components
 import Section from '@/node_modules/cv-assets/components/organisms/Section';
-import CircleButton from '@/node_modules/cv-assets/components/atoms/CircleButton';
 
 export default {
   components: {
-    Section,
-    CircleButton
+    Section
   },
 
   data() {
     return {
       component: null,
-      visibleOld: null,
       titleTooltip: null
     };
   },
@@ -26,10 +23,6 @@ export default {
   computed: {
     items() {
       return this.content.items;
-    },
-
-    moreTooltip() {
-      return false;
     }
   }
 };
