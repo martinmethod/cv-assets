@@ -16,38 +16,36 @@ export default {
     };
   },
 
-  computed: {
-    items() {
-      return this.content.items.map(({ fields, sys }) => {
-        const { title, items } = fields;
+  methods: {
+    modifyItem({ fields, sys }) {
+      const { title, items } = fields;
 
-        return {
-          title,
-          items: items.map(({ fields }) => {
-            const { experience } = fields;
-            let label;
+      return {
+        title,
+        items: items.map(({ fields }) => {
+          const { experience } = fields;
+          let label;
 
-            switch (true) {
-              case experience <= 50:
-                label = this.$t('junior');
-                break;
-              case experience > 50 && experience <= 75:
-                label = this.$t('midLevel');
-                break;
-              default:
-                label = this.$t('senior');
-            }
+          switch (true) {
+            case experience <= 50:
+              label = this.$t('junior');
+              break;
+            case experience > 50 && experience <= 75:
+              label = this.$t('midLevel');
+              break;
+            default:
+              label = this.$t('senior');
+          }
 
-            return {
-              fields: {
-                label,
-                ...fields
-              },
-              sys: { ...sys }
-            };
-          })
-        };
-      });
+          return {
+            fields: {
+              label,
+              ...fields
+            },
+            sys: { ...sys }
+          };
+        })
+      };
     }
   }
 };

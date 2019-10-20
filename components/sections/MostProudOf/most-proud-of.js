@@ -16,16 +16,14 @@ export default {
     };
   },
 
-  computed: {
-    items() {
-      return this.content.items.map(({ fields }) => {
-        const { title, description } = fields;
+  methods: {
+    modifyItem({ fields }) {
+      const { title, description } = fields;
 
-        return {
-          title,
-          description
-        };
-      });
+      return {
+        title,
+        description
+      };
     }
   }
 };

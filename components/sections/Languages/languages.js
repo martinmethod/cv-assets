@@ -16,17 +16,15 @@ export default {
     };
   },
 
-  computed: {
-    items() {
-      return this.content.items.map(({ fields }) => {
-        const { name, level, label } = fields;
+  methods: {
+    modifyItem({ fields }) {
+      const { name, level, label } = fields;
 
-        return {
-          name,
-          level,
-          label
-        };
-      });
+      return {
+        name,
+        level,
+        label
+      };
     }
   }
 };
