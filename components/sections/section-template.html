@@ -1,16 +1,13 @@
 <Section :class="$style.root" :heading="content.name" :tooltip="titleTooltip">
-  <template v-if="items.initial && items.rest">
-    <div :class="$style.item" v-for="item in items.initial">
+  <template v-if="items.featured && items.regular">
+    <div :class="$style.item" v-for="item in items.featured">
       <component :is="component" :data="item" />
     </div>
-    <div v-if="visibleRest" :class="$style.item" v-for="item in items.rest">
-      <component :is="component" :data="item" />
-    </div>
-    <div :class="$style.more" v-if="!visibleRest && items.rest.length > 0">
-      <CircleButton @click="showRestItems">
-        <span v-tooltip.top="{ content: moreTooltip }">+{{ items.rest.length }}</span>
-      </CircleButton>
-      <i v-if="moreTooltip">{{ moreTooltip }}</i>
+    <div :class="$style.all" v-if="items.regular.length > 0">
+      <DotButton @click="showAllItems" display="block">
+        <span v-if="seeAllText">{{ seeAllText }}</span>
+        <span v-else>{{ $t('seeAll') }}</span>
+      </DotButton>
     </div>
   </template>
   <div v-else :class="$style.item" v-for="item in items">

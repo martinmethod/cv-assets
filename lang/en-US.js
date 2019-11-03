@@ -9,6 +9,6 @@ export default {
   junior: 'Junior',
   midLevel: 'Mid-level',
   senior: 'Senior',
-  previousPositions: 'more jobs in the period',
-  andMore: 'and more'
+  seeAll: 'See all',
+  close: 'Close'
 };

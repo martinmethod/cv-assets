@@ -9,6 +9,6 @@ export default {
   junior: 'Начинаещ',
   midLevel: 'Напреднал',
   senior: 'Експерт',
-  previousPositions: 'стари позиции от периода',
-  andMore: 'и още'
+  seeAll: 'Вижте всички',
+  close: 'Затворете'
 };

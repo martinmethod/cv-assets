@@ -15,7 +15,7 @@ $roles-borders-underlines: (
 $roles-borders-wrappers: (
   'avatar': map-get($swatch-borders, '2px-solid-dusty-gray'),
   'tag': map-get($swatch-borders, '1px-solid-current-color'),
-  'circle-button': map-get($swatch-borders, '1px-solid-current-color'),
+  'dot-button': map-get($swatch-borders, '1px-solid-current-color'),
   'progress-bar': map-get($swatch-borders, '1px-solid-alto')
 );
 
@@ -23,5 +23,6 @@ $roles-borders-wrappers: (
 $roles-borders-radiuses: (
   'avatar': map-get($swatch-border-radiuses, 'circle'),
   'tag': map-get($swatch-border-radiuses, 'oval3'),
+  'modal': map-get($swatch-border-radiuses, 'oval3'),
   'progress': map-get($swatch-border-radiuses, 'oval-round')
 );

@@ -25,17 +25,12 @@
   }
 }
 
-// -------------------------| More
-.more {
+// -------------------------| See all
+.all {
   padding-top: rem(13px);
   text-align: center;
   user-select: none;
   border-top: map-get($roles-borders-dividers, 'gray');
-
-  i {
-    display: none;
-    color: map-get($roles-col-texts, 'meta');
-  }
 
   a {
     display: inline-flex;
@@ -52,13 +47,7 @@
 
 // -------------------------| Print styles
 @media print {
-  .more {
-    i {
-      display: block;
-    }
-
-    a {
-      display: none;
-    }
+  .all {
+    display: none;
   }
 }

@@ -4,9 +4,9 @@
   </div>
   <div v-if="data.file" :class="$style.relBox">
     <span :class="$style.file">
-      <CircleButton color="red" :link="data.file" :tooltip="$t('openPDF')">
+      <DotButton color="red" :link="data.file" :tooltip="$t('openPDF')">
         <FileSVG />
-      </CircleButton>
+      </DotButton>
     </span>
   </div>
   <Heading :size="3" type="item">

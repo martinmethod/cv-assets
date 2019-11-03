@@ -23,10 +23,8 @@ export default {
   },
 
   computed: {
-    moreTooltip() {
-      return `+${this.items.rest.length} ${this.$t(
-        'previousPositions'
-      )} ${getPeriod(this.splittedItems.rest)}`;
+    seeAllText() {
+      return `${this.$t('seeAll')} (${getPeriod(this.content.items)})`;
     }
   },
 
