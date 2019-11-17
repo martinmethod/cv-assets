@@ -4,6 +4,7 @@
 // -------------------------| Header links
 @mixin links-header-styles() {
   color: map-get($roles-col-texts, 'base');
+  background-color: transparent !important;
   box-shadow: none !important;
 
   @media (hover: hover) {
