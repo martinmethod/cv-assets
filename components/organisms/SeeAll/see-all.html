@@ -1,0 +1,4 @@
+<Modal :class="$style.root">
+  <component :class="$style.section" :is="sectionComponent" :content="fullContent" />
+  <DotButton @click="$emit('close')" :class="$style.button" display="block">{{ $t('close') }}</DotButton>
+</Modal>

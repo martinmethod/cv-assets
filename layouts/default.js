@@ -6,7 +6,7 @@ import { filterLocales } from '@/node_modules/cv-assets/services/FilterService';
 
 // Components
 import LangSwitcher from '@/node_modules/cv-assets/components/atoms/LangSwitcher';
-import CircleButton from '@/node_modules/cv-assets/components/atoms/CircleButton';
+import DotButton from '@/node_modules/cv-assets/components/atoms/DotButton';
 import Header from '@/node_modules/cv-assets/components/organisms/Header';
 import Footer from '@/node_modules/cv-assets/components/organisms/Footer';
 
@@ -14,7 +14,7 @@ import Footer from '@/node_modules/cv-assets/components/organisms/Footer';
 import FileSVG from '@/node_modules/cv-assets/assets/graphics/pdf.svg';
 
 export default {
-  components: { LangSwitcher, CircleButton, Header, Footer, FileSVG },
+  components: { LangSwitcher, DotButton, Header, Footer, FileSVG },
 
   computed: {
     ...mapState({

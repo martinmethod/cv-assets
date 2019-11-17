@@ -1,14 +1,16 @@
 // Components
+import DotButton from '@/node_modules/cv-assets/components/atoms/DotButton';
 import Section from '@/node_modules/cv-assets/components/organisms/Section';
-import CircleButton from '@/node_modules/cv-assets/components/atoms/CircleButton';
+import SeeAll from '@/node_modules/cv-assets/components/organisms/SeeAll';
 
 // Services
 import { filterItemsTillNow } from '@/node_modules/cv-assets/services/FilterService';
 
 export default {
   components: {
+    DotButton,
     Section,
-    CircleButton
+    SeeAll
   },
 
   data() {
@@ -17,7 +19,6 @@ export default {
         filterItemsTillNow(this.content.items),
         this.content.shownLimit
       ),
-      visibleRest: false,
       component: null,
       titleTooltip: null
     };
@@ -49,10 +50,8 @@ export default {
       return modifiedItems;
     },
 
-    moreTooltip() {
-      return `...${this.$t(
-        'andMore'
-      )}`;
+    seeAllText() {
+      return false;
     }
   },
 
@@ -61,14 +60,16 @@ export default {
       return item;
     },
 
-    showRestItems() {
-      this.visibleRest = true;
+    showAllItems() {
+      this.$showModal(SeeAll, {
+        content: this.content
+      })
     },
 
     splitItems(items, amount) {
       return {
-        initial: items.slice(0, amount),
-        rest: items.slice(amount)
+        featured: items.slice(0, amount),
+        regular: items.slice(amount)
       };
     }
   }
