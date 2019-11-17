@@ -1,0 +1,17 @@
+// ===================================================|
+// Organisms: SEE ALL
+
+// -------------------------| Root
+.root {
+  //
+}
+
+// -------------------------| Section
+.section {
+  //
+}
+
+// -------------------------| Close button
+.button {
+  margin-top: rem(map-get($roles-spaces-min, 'app') * 2)
+}

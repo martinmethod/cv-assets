@@ -1,5 +1,5 @@
 // ===================================================|
-// Atoms: CIRCLE BUTTON
+// Atoms: DOT BUTTON
 
 // -------------------------| Variables
 $size: 28px;
@@ -7,19 +7,29 @@ $radius: map-get($swatch-border-radiuses, 'circle');
 
 // -------------------------| Root
 .root {
-  @include dimensions-square(rem($size));
-
   display: flex;
   align-items: center;
   justify-content: center;
-  border: map-get($roles-borders-wrappers, 'circle-button');
-  border-radius: $radius;
+  border: map-get($roles-borders-wrappers, 'dot-button');
 
   svg {
     @include dimensions-square(rem($size/2));
 
     fill: currentColor;
   }
+}
+
+// -------------------------| Display
+.circle {
+  @include dimensions-square(rem($size));
+
+  border-radius: $radius;
+}
+
+.block {
+  width: 100%;
+  height: rem($size);
+  border-radius: map-get($roles-borders-radiuses, 'tag');
 }
 
 // -------------------------| Colors

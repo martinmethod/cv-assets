@@ -2,11 +2,11 @@
 // Atoms: LANGUAGE SWITCHER
 
 // Components
-import CircleButton from '@/node_modules/cv-assets/components/atoms/CircleButton';
+import DotButton from '@/node_modules/cv-assets/components/atoms/DotButton';
 
 export default {
   components: {
-    CircleButton
+    DotButton
   },
 
   props: {

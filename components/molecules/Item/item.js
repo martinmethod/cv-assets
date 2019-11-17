@@ -4,7 +4,7 @@
 // Components
 import Heading from '@/node_modules/cv-assets/components/atoms/Heading';
 import Paragraph from '@/node_modules/cv-assets/components/atoms/Paragraph';
-import CircleButton from '@/node_modules/cv-assets/components/atoms/CircleButton';
+import DotButton from '@/node_modules/cv-assets/components/atoms/DotButton';
 import MetaGroup from '@/node_modules/cv-assets/components/molecules/MetaGroup';
 
 // Graphics
@@ -14,7 +14,7 @@ export default {
   components: {
     Heading,
     Paragraph,
-    CircleButton,
+    DotButton,
     MetaGroup,
     FileSVG
   },

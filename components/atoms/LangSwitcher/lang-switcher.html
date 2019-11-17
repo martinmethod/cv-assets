@@ -1,5 +1,5 @@
 <div :class="$style.root">
-  <CircleButton
+  <DotButton
     :class="$style.root"
     v-for="lang in languages"
     v-tooltip.right="{
@@ -9,5 +9,5 @@
     @click="changeLang(lang.code)"
   >
     {{ lang.code }}
-  </CircleButton>
+  </DotButton>
 </div>

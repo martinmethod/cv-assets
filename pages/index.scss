@@ -25,10 +25,6 @@
       margin-bottom: rem(36px);
     }
   }
-
-  a:not([data-btn]) {
-    @include link-styles-generator();
-  }
 }
 
 // -------------------------| Print styles
