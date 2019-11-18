@@ -1,4 +1,7 @@
 <Modal :class="$style.root">
+  <a :class="$style.x" @click="$emit('close')">
+    <X />
+  </a>
   <component :class="$style.section" :is="sectionComponent" :content="fullContent" />
   <DotButton @click="$emit('close')" :class="$style.button" display="block">{{ $t('close') }}</DotButton>
 </Modal>

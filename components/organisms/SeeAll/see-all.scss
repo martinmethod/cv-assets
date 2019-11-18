@@ -11,6 +11,29 @@
   //
 }
 
+// -------------------------| X button
+.x {
+  $size: 24px;
+  $offset: 2px;
+
+  @include dimensions-square(rem($size));
+
+  position: absolute;
+  top: -#{rem($size / 2)};
+  right: -#{rem($size / 2)};
+  padding: rem($offset);
+  border-radius: map-get($swatch-border-radiuses, 'circle') !important;
+
+  &,
+  svg {
+    display: block;
+  }
+
+  svg {
+    @include dimensions-square(rem($size - ($offset * 2)));
+  }
+}
+
 // -------------------------| Close button
 .button {
   margin-top: rem(map-get($roles-spaces-min, 'app') * 2)
