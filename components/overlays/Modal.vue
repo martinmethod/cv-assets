@@ -35,7 +35,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: rem($offset);
+      padding: rem($offset) rem($offset) rem(120px);
     }
 
     .v--modal-box {
