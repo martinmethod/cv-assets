@@ -11,6 +11,7 @@ export default (Vue) => {
       component,
       props || {},
       {
+        width: '100%',
         height: 'auto',
         scrollable: true,
         clickToClose: true,

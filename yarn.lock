@@ -867,6 +867,11 @@ util.promisify@~1.0.0:
     define-properties "^1.1.2"
     object.getownpropertydescriptors "^2.0.3"
 
+v-click-outside@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/v-click-outside/-/v-click-outside-3.0.0.tgz#90c6b83cc63634786acaa418400cd871586dbd3a"
+  integrity sha512-SHmKtZV2NsqJ0vkC85wAqswo2CnjRfoKbbyilA27U18G55aKzhqGsW8ve07cCeGnRzewh0lDKztD2Txh4IQ7sA==
+
 v-tooltip@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/v-tooltip/-/v-tooltip-2.0.2.tgz#8610d9eece2cc44fd66c12ef2f12eec6435cab9b"
@@ -875,6 +880,13 @@ v-tooltip@^2.0.2:
     lodash "^4.17.11"
     popper.js "^1.15.0"
     vue-resize "^0.4.5"
+
+vue-div-100vh@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/vue-div-100vh/-/vue-div-100vh-0.1.2.tgz#95804f4d9f397ae013eb1631b1705bfc3ab77d0d"
+  integrity sha512-p3XUqyjc4Mpep5hwSGtkXbDCKcAt6oShKGMeuZmaS+yDFK2w+HsR5WssuY1WtMUbNKl5WI/ohJeDXG+3XKN5DA==
+  dependencies:
+    vue "^2.6.6"
 
 vue-i18n-extensions@^0.2.1:
   version "0.2.1"
@@ -896,7 +908,7 @@ vue-resize@^0.4.5:
   resolved "https://registry.yarnpkg.com/vue-resize/-/vue-resize-0.4.5.tgz#4777a23042e3c05620d9cbda01c0b3cc5e32dcea"
   integrity sha512-bhP7MlgJQ8TIkZJXAfDf78uJO+mEI3CaLABLjv0WNzr4CcGRGPIAItyWYnP6LsPA4Oq0WE+suidNs6dgpO4RHg==
 
-vue@^2.6.10:
+vue@^2.6.10, vue@^2.6.6:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
