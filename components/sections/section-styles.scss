@@ -27,6 +27,7 @@
 
 // -------------------------| See all
 .all {
+  display: block;
   padding-top: rem(13px);
   text-align: center;
   user-select: none;
@@ -47,6 +48,12 @@
 
 // -------------------------| Print styles
 @media print {
+  .item {
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+
   .all {
     display: none;
   }
