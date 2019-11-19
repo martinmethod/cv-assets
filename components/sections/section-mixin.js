@@ -63,6 +63,8 @@ export default {
     showAllItems() {
       this.$showModal(SeeAll, {
         content: this.content
+      }, {
+        name: 'modal-see-all'
       })
     },
 
