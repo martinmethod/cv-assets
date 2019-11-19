@@ -10,5 +10,6 @@ export default {
   midLevel: 'Mid-level',
   senior: 'Senior',
   seeAll: 'See all',
-  close: 'Close'
+  close: 'Close',
+  previousPositions: 'more jobs in the period'
 };

@@ -33,6 +33,11 @@
   user-select: none;
   border-top: map-get($roles-borders-dividers, 'gray');
 
+  i {
+    display: none;
+    color: map-get($roles-col-texts, 'meta');
+  }
+
   a {
     display: inline-flex;
 
@@ -55,6 +60,18 @@
   }
 
   .all {
-    display: none;
+    padding-top: 0;
+    border-top: 0;
+
+    i {
+      display: block;
+      padding-top: rem(13px);
+      margin-top: rem(13px);
+      border-top: map-get($roles-borders-dividers, 'gray');
+    }
+
+    a {
+      display: none;
+    }
   }
 }

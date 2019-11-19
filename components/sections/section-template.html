@@ -8,6 +8,7 @@
         <span v-if="seeAllText">{{ seeAllText }}</span>
         <span v-else>{{ $t('seeAll') }}</span>
       </DotButton>
+      <i v-if="printMeta">{{ printMeta }}</i>
     </span>
   </template>
   <div v-else :class="$style.item" v-for="item in items">

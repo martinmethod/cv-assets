@@ -10,5 +10,6 @@ export default {
   midLevel: 'Напреднал',
   senior: 'Експерт',
   seeAll: 'Вижте всички',
-  close: 'Затворете'
+  close: 'Затворете',
+  previousPositions: 'стари позиции от периода'
 };
