@@ -25,6 +25,11 @@ export default {
   computed: {
     seeAllText() {
       return `${this.$t('seeAll')} (${getPeriod(this.content.items)})`;
+    },
+    printMeta() {
+      return `+${this.items.regular.length} ${this.$t(
+        'previousPositions'
+      )} ${getPeriod(this.splittedItems.regular)}`;
     }
   },
 

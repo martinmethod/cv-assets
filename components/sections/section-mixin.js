@@ -52,6 +52,10 @@ export default {
 
     seeAllText() {
       return false;
+    },
+
+    printMeta() {
+      return false;
     }
   },
 
