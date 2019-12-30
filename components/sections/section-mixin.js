@@ -51,7 +51,7 @@ export default {
     },
 
     seeAllText() {
-      return false;
+      return `${this.$t('seeAll')} (${this.content.items.length})`;
     },
 
     printMeta() {

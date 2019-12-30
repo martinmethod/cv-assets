@@ -11,5 +11,7 @@ export default {
   senior: 'Експерт',
   seeAll: 'Вижте всички',
   close: 'Затворете',
-  previousPositions: 'стари позиции от периода'
+  positions: 'позиции',
+  previousPositions: 'стари позиции от периода',
+  takenCourses: 'предходни курсове'
 };
