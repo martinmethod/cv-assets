@@ -11,5 +11,7 @@ export default {
   senior: 'Senior',
   seeAll: 'See all',
   close: 'Close',
-  previousPositions: 'more jobs in the period'
+  positions: 'positions',
+  previousPositions: 'more jobs in the period',
+  takenCourses: 'more taken courses'
 };

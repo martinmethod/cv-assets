@@ -52,7 +52,7 @@ export default {
         startDate,
         endDate,
         host,
-        duties,
+        description,
         stack,
         document,
         link,
@@ -66,6 +66,12 @@ export default {
         titleUrl: link,
         subtitle: host ? host.fields.name : null,
         subtitleUrl: host ? host.fields.homePage : null,
+        text: description
+          ? description
+            .replace(/\n/g, '')
+            .split('• ')
+            .slice(1)
+          : null,
         details: [
           {
             type: 'calendar',
@@ -85,12 +91,6 @@ export default {
       const format = {
         experience: {
           ...expEdu,
-          text: duties
-            ? duties
-                .replace(/\n/g, '')
-                .split('• ')
-                .slice(1)
-            : null,
           tooltip: stack
             ? `${this.$t('stack')}: ${stack
                 .map((tech) => tech.fields.name)
