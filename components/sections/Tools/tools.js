@@ -16,6 +16,12 @@ export default {
     };
   },
 
+  computed: {
+    seeAllText() {
+      return this.$t('seeAll');
+    }
+  },
+
   methods: {
     modifyItem({ fields, sys }) {
       const { title, items } = fields;
