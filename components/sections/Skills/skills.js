@@ -5,5 +5,11 @@
 import sectionMixin from '@/node_modules/cv-assets/components/sections/section-mixin';
 
 export default {
-  mixins: [sectionMixin]
+  mixins: [sectionMixin],
+
+  computed: {
+    seeAllText() {
+      return this.$t('seeAll');
+    }
+  }
 };
