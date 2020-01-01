@@ -6,21 +6,30 @@ $offset: rem(($roles-size-doc-icon * 1.8) + 5);
 
 // -------------------------| Root
 .root {
-  &.document {
-    padding-right: $offset;
+  &.document,
+  &.nfo {
+    .heading {
+      padding-right: $offset;
 
-    @include mq-device-holding-type('inpocket') {
-      @include padding-h($offset);
+      @include mq-device-holding-type('inpocket') {
+        @include padding-h($offset);
+      }
     }
   }
-}
 
-// -------------------------| Heading
-.heading {
-  .root.i & {
-    @include mq-device-holding-type('outpocket') {
-      display: inline-block;
-      padding-right: $offset;
+  &.document {
+    .heading {
+      @include mq-device-holding-type('inpocket') {
+        @include padding-h($offset);
+      }
+    }
+  }
+
+  &.nfo {
+    .heading {
+      @include mq-device-holding-type('inpocket') {
+        @include padding-h(0);
+      }
     }
   }
 }
@@ -28,7 +37,7 @@ $offset: rem(($roles-size-doc-icon * 1.8) + 5);
 // -------------------------| File
 .file {
   position: absolute;
-  right: -#{$offset};
+  right: 0;
   transform: translateY(rem(-2px));
 
   @media print {

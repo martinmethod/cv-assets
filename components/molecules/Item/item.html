@@ -1,4 +1,4 @@
-<div :class="[$style.root, {[$style.document]: data.file, [$style.i]: data.tooltip, }]">
+<div :class="[$style.root, {[$style.document]: data.file, [$style.nfo]: data.tooltip, }]">
   <div v-if="data.tooltip" :class="$style.relBox">
     <div :class="$style.info"><span v-tooltip.bottom="{ content: data.tooltip }">i</span></div>
   </div>
@@ -9,7 +9,7 @@
       </DotButton>
     </span>
   </div>
-  <Heading :size="3" type="item">
+  <Heading :size="3" type="item" :class="$style.heading">
     <component
       :is="headingWrapper(data.titleUrl)"
       :href="data.titleUrl"
