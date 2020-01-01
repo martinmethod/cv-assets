@@ -24,7 +24,7 @@ export default {
 
   computed: {
     seeAllText() {
-      return `${this.$t('seeAll')} ${this.$t(
+      return `${this.$t('seeAll')} ${this.content.items.length} ${this.$t(
         'positions'
       )} (${getPeriod(this.content.items)})`;
     },
