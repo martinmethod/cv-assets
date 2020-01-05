@@ -1,6 +1,6 @@
 {
   "name": "cv-assets",
-  "version": "1.7.9",
+  "version": "1.7.10",
   "description": "Common assets and code for all CV projects based on my layout",
   "author": {
     "name": "Martin Metodiev",
@@ -20,6 +20,7 @@
     "moment-duration-format": "^2.3.2",
     "nuxt-i18n": "^6.4.1",
     "nuxt-svg-loader": "^1.0.1",
+    "sass-loader": "^8.0.0",
     "v-click-outside": "^3.0.0",
     "v-tooltip": "^2.0.2",
     "vue": "^2.6.11",
