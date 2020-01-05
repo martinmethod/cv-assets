@@ -4,7 +4,6 @@
 // -------------------------| Root
 .root {
   $indent-value: 9px;
-
   line-height: map-get($roles-typo-line-heights, 'text');
 
   @include mq-device-holding-type('inpocket') {
@@ -27,5 +26,12 @@
         content: '• ';
       }
     }
+  }
+}
+
+// -------------------------| Print styles
+@media print {
+  .root {
+    line-height: normal;
   }
 }

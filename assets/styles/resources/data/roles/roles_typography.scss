@@ -20,16 +20,15 @@ $roles-typo-font-sizes: (
   'section': map-get($swatch-typo-font-sizes, '28'),
   'item': map-get($swatch-typo-font-sizes, '20'),
   'info': map-get($swatch-typo-font-sizes, '15'),
-  'body': map-get($swatch-typo-font-sizes, '13'),
-  'meta': map-get($swatch-typo-font-sizes, '10'),
+  'body': map-get($swatch-typo-font-sizes, '15'),
+  'meta': map-get($swatch-typo-font-sizes, '11'),
   'copyright': map-get($swatch-typo-font-sizes, '10')
 );
 
 // -------------------------| Line-heights
 $roles-typo-line-heights: (
-  'body': map-get($swatch-line-heights, 'normal'),
   'title': map-get($swatch-line-heights, '100%'),
-  'text': map-get($swatch-line-heights, '130%'),
+  'text': map-get($swatch-line-heights, '150%'),
   'progress-bar': map-get($swatch-line-heights, '170%')
 );
 
@@ -39,7 +38,7 @@ $roles-typo-font-weights: (
   'title': map-get($swatch-font-weights, 'bold'),
   'subtitle': map-get($swatch-font-weights, 'semibold'),
   'item': map-get($swatch-font-weights, 'semibold'),
-  'info': map-get($swatch-font-weights, 'regular'),
+  'info': map-get($swatch-font-weights, 'semibold'),
   'meta': map-get($swatch-font-weights, 'semibold'),
   'progress-bar': map-get($swatch-font-weights, 'semibold'),
   'contact': map-get($swatch-font-weights, 'semibold'),
