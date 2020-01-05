@@ -4,8 +4,8 @@
 // -------------------------| Body
 body {
   font: map-get($roles-typo-font-weights, 'body')
-  map-get($roles-typo-font-sizes, 'body')
-  map-get($roles-typo-font-families, 'body');
+    map-get($roles-typo-font-sizes, 'body')
+    map-get($roles-typo-font-families, 'body');
 }
 
 // -------------------------| __nuxt container

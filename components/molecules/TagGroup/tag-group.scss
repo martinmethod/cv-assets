@@ -30,3 +30,12 @@
     }
   }
 }
+
+// -------------------------| Print styles
+@media print {
+  .group {
+    > span {
+      font-size: 1.3rem;
+    }
+  }
+}

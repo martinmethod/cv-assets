@@ -25,6 +25,10 @@ $heading-types: 'title' 'subtitle' 'section' 'item' 'info';
   .#{$heading} {
     font-size: map-get($roles-typo-font-sizes, $heading);
     font-weight: map-get($roles-typo-font-weights, $heading);
+
+    &::after {
+      content: map-get($roles-typo-font-weights, $heading);
+    }
   }
 }
 
@@ -66,6 +70,8 @@ $heading-types: 'title' 'subtitle' 'section' 'item' 'info';
 
     i {
       display: block;
+      font-size: 1.3rem;
+      font-weight: normal;
     }
   }
 

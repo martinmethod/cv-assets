@@ -27,7 +27,6 @@
   @include dimensions-square(rem(10.4px));
 
   margin-right: rem(2.6px);
-  transform: translateY(rem(-1px));
 
   svg {
     fill: map-get($roles-col-icons, 'meta');
@@ -41,6 +40,10 @@
 
 // -------------------------| Print styles
 @media print {
+  .root {
+    font-size: 1rem;
+  }
+
   .addon {
     display: inline-block;
   }
