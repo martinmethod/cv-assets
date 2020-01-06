@@ -14,6 +14,7 @@ export default {
     }
   ],
   defaultLocale: 'en',
+  detectBrowserLanguage: false,
   vueI18n: {
     fallbackLocale: 'en'
   },
