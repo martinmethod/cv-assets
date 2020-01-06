@@ -14,7 +14,7 @@
   },
   "private": true,
   "dependencies": {
-    "contentful": "^7.11.3",
+    "contentful": "^7.11.4",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "moment-duration-format": "^2.3.2",
