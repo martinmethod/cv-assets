@@ -10,7 +10,7 @@
   );
 
   column-count: 2;
-  margin-bottom: rem(map-get($roles-spaces-min, 'organisms') * 2);
+  margin-bottom: rem(map-get($roles-spaces-min, 'organisms') * 1.5);
 
   @include mq-tablet-breakpoint('below') {
     column-gap: normal;
@@ -18,8 +18,8 @@
   }
 
   > section {
-    display: inline-block;
     width: 100%;
+    break-inside: avoid-column;
 
     &:not(:last-child) {
       margin-bottom: rem(36px);
