@@ -15,7 +15,7 @@ export default {
       foundationYear: ({ contentful }) => contentful.data.foundationYear
     }),
     domain() {
-      return homepage.replace('http://', '');
+      return homepage.replace('http://', '').replace('https://', '');
     }
   }
 };

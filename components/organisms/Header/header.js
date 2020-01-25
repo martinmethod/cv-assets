@@ -58,7 +58,7 @@ export default {
         links.push({
           id: 'homepage',
           icon: HomeSVG,
-          value: homePage.replace('http://', ''),
+          value: homePage.replace('http://', '').replace('https://', ''),
           link: homePage
         });
       }
@@ -68,7 +68,7 @@ export default {
           id: 'portfolio',
           icon: PortfolioSVG,
           value: 'portfolio',
-          printValue: `portfolio.${homePage.replace('http://', '')}`,
+          printValue: `portfolio.${homePage.replace('http://', '').replace('https://', '')}`,
           link: portfolio
         });
       }
@@ -81,7 +81,7 @@ export default {
             id,
             icon: icon.fields.file.url,
             value: username,
-            printValue: url.replace('https://', ''),
+            printValue: url.replace('http://', '').replace('https://', ''),
             link: url
           });
         });
