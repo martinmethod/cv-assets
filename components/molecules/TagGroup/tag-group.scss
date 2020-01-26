@@ -8,17 +8,17 @@
 
 // -------------------------| Group
 .group {
-  $margin: rem(5.07px);
+  $margin: 5.07px;
 
-  margin-bottom: -$margin;
+  margin-bottom: -#{rem($margin)};
   font-size: 0;
 
   > span {
-    margin-bottom: $margin;
+    margin-bottom: rem($margin);
     font-size: map-get($roles-typo-font-sizes, 'body');
 
     &:not(:last-child) {
-      margin-right: $margin;
+      margin-right: rem($margin);
     }
   }
 
@@ -27,6 +27,12 @@
 
     &:not(:last-child) {
       margin-bottom: rem(6.5px);
+    }
+  }
+
+  @include mq-device-holding-type('inpocket') {
+    > span {
+      margin: 0 rem($margin / 2) rem($margin) !important;
     }
   }
 }

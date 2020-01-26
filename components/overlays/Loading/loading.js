@@ -10,7 +10,6 @@ export default {
       'toggleLoadingFlag'
     ]),
     start() {
-      this.toggleLoadingFlag();
       this.loading = true;
     },
 
@@ -18,7 +17,7 @@ export default {
       setTimeout(() => {
         this.toggleLoadingFlag();
         this.loading = false;
-      }, 500);
+      }, 300);
     }
   }
 };
