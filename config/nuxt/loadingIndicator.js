@@ -1,5 +1,5 @@
 export default {
-  name: 'fading-circle',
+  name: 'pulse',
   color: '#337a89',
   background: 'white'
 }

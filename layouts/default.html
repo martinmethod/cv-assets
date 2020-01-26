@@ -1,18 +1,22 @@
-<div :class="[$style.root, { [$style.loading]: loading }]">
-  <LangSwitcher
-    v-if="locales.length > 1"
-    :class="$style.language"
-    :languages="languages"
-  />
-  <DotButton
-    color="red"
-    :class="[$style.pdf, { [$style.first]: locales.length === 1 }]"
-    :link="pdf"
-    :tooltip="$t('download')"
-  >
-    <FileSVG />
-  </DotButton>
-  <Header :class="$style.header" />
-  <nuxt :class="$style.main" />
-  <Footer :class="$style.footer" />
+<div>
+  <div :class="[$style.root, { [$style.loading]: loading }]">
+    <LangSwitcher
+        v-if="locales.length > 1"
+        :class="$style.language"
+        :languages="languages"
+    />
+    <DotButton
+        color="red"
+        :class="[$style.pdf, { [$style.first]: locales.length === 1 }]"
+        :link="pdf"
+        :tooltip="$t('download')"
+    >
+      <FileSVG />
+    </DotButton>
+    <Header :class="$style.header" />
+    <nuxt :class="$style.main" />
+    <Footer :class="$style.footer" />
+  </div>
+  <Spinner :loading="loading" />
 </div>
+
