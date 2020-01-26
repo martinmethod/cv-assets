@@ -22,6 +22,8 @@
   min-height: 100vh;
   margin: 0 auto;
   background-color: map-get($roles-col-backgrounds, 'app');
+  transition: all .15s ease-in-out;
+  transform-origin: 50% 0;
 
   @include mq-tablet-breakpoint('below') {
     padding-top: rem(map-get($roles-spaces-max, 'app') / 1.4);
@@ -89,22 +91,10 @@
 }
 
 // -------------------------| Loading
-.header,
-.main,
-.footer {
-  transition: all .15s ease-in-out;
-  transform-origin: 0 0;
-
-  .loading & {
-    //filter: blur(50px);
-    transform: scale(0);
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  @include mq-tablet-breakpoint('below') {
-    transform-origin: 100% 0;
-  }
+.loading {
+  transform: scaleX(0);
+  opacity: 0;
+  pointer-events: none;
 }
 
 // -------------------------| Print styles

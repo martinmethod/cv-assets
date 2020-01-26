@@ -1,0 +1,19 @@
+// ===================================================|
+// Atoms: SPINNER
+
+// -------------------------| Root
+.root {
+  @include absolute-centered(fixed);
+
+  opacity: 0;
+
+  > div > * {
+    background-color: map-get($roles-col-theme, 'primary-dark') !important;
+  }
+}
+
+.loading {
+  z-index: 1;
+  opacity: 1;
+  transition: all .25s ease-in-out;
+}
