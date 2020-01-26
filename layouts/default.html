@@ -1,4 +1,4 @@
-<div :class="$style.root">
+<div :class="[$style.root, { [$style.loading]: loading }]">
   <LangSwitcher
     v-if="locales.length > 1"
     :class="$style.language"
