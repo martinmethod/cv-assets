@@ -14,8 +14,10 @@
   }
 
   .tooltip-inner {
+    max-width: rem(290px);
     padding: 8px 21px;
     font-size: 13px;
+    line-height: map-get($roles-typo-line-heights, 'text');
     color: map-get($roles-col-texts, 'negative');
     background: map-get($roles-col-backgrounds, 'tooltip');
     border-radius: 3px;

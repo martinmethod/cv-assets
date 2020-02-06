@@ -92,9 +92,9 @@ export default {
         experience: {
           ...expEdu,
           tooltip: stack
-            ? `${this.$t('stack')}: ${stack
-                .map((tech) => tech.fields.name)
-                .join(', ')}`
+            ? `<p><strong>${this.$t('stack')}</strong></p> <p>${stack
+                .map((tech) => `• ${tech.fields.name}`)
+                .join('<br>')}</p>`
             : null
         },
 
