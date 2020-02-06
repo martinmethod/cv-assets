@@ -1,7 +1,8 @@
-import { VTooltip, VPopover, VClosePopover } from 'v-tooltip';
+import VTooltip, { VPopover } from 'v-tooltip';
 
 export default (Vue) => {
-  Vue.directive('tooltip', VTooltip);
-  Vue.directive('close-popover', VClosePopover);
+  Vue.use(VTooltip, {
+    defaultOffset: 5
+  });
   Vue.component('v-popover', VPopover);
 };
