@@ -7,18 +7,19 @@ $offset: map-get($roles-spaces-min, 'app');
 // -------------------------| Stage
 .stage {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  width: 100%;
-  min-height: 100%;
-  height: auto;
-  padding: rem($offset * 2) rem($offset);
+  height: 100%;
+  padding: rem($offset);
 }
 
 // -------------------------| Root
 .root {
   position: relative;
+  display: flex;
+  flex-direction: column;
   max-width: rem($roles-size-modal);
+  max-height: 100%;
   padding: rem($offset);
   background-color: white;
   border-radius: rem(3px);
@@ -27,7 +28,16 @@ $offset: map-get($roles-spaces-min, 'app');
 
 // -------------------------| Section
 .section {
-  //
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+
+  > div:nth-child(2) {
+    @include padding-v(rem(5px));
+
+    overflow: auto;
+  }
 }
 
 // -------------------------| X button
@@ -57,5 +67,6 @@ $offset: map-get($roles-spaces-min, 'app');
 
 // -------------------------| Close button
 .button {
-  margin-top: rem(map-get($roles-spaces-min, 'app') * 2)
+  flex-shrink: 0;
+  margin-top: rem($offset)
 }
