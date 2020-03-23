@@ -4,6 +4,7 @@
 // -------------------------| Variables
 $offset: map-get($roles-spaces-min, 'app');
 $curtain-offset: 13px;
+$side-offset: 5px;
 
 // -------------------------| Stage
 .stage {
@@ -29,6 +30,8 @@ $curtain-offset: 13px;
 
 // -------------------------| Section
 .section {
+  @include margin-h(-#{rem($side-offset)});
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -57,11 +60,14 @@ $curtain-offset: 13px;
   }
 
   h2 {
+    @include margin-h(rem($side-offset));
+
     margin-bottom: 0;
   }
 
   > div:nth-child(2) {
     @include padding-v(rem($curtain-offset));
+    @include padding-h(rem($side-offset));
 
     overflow: auto;
   }
@@ -94,5 +100,6 @@ $curtain-offset: 13px;
 
 // -------------------------| Close button
 .button {
+  z-index: 1;
   flex-shrink: 0;
 }
