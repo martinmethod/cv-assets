@@ -41,10 +41,9 @@ $side-offset: $offset;
   > div:nth-child(1)::after,
   &::after {
     position: absolute;
-    right: 0;
-    left: 0;
+    right: rem($side-offset);
+    left: rem($side-offset);
     z-index: 1;
-    width: 100%;
     height: rem($curtain-offset * 1.5);
     content: '';
   }

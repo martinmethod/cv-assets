@@ -16,7 +16,8 @@ $roles-borders-wrappers: (
   'avatar': map-get($swatch-borders, '2px-solid-dusty-gray'),
   'tag': map-get($swatch-borders, '1px-solid-current-color'),
   'dot-button': map-get($swatch-borders, '1px-solid-current-color'),
-  'progress-bar': map-get($swatch-borders, '1px-solid-alto')
+  'progress-bar': map-get($swatch-borders, '1px-solid-alto'),
+  'negative': map-get($swatch-borders, '1px-solid-white')
 );
 
 // -------------------------| Radiuses

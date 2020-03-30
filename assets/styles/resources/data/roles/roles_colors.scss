@@ -24,7 +24,7 @@ $roles-col-texts: (
   'section': map-get($roles-col-theme, 'primary-dark'),
   'info': map-get($swatch-colors-mono, 'dove-gray'),
   'meta': map-get($swatch-colors-mono, 'dove-gray'),
-  'icon': map-get($swatch-colors-palette, 'supernova'),
+  'icon': map-get($roles-col-theme, 'primary-dark'),
   'copyright': map-get($swatch-colors-mono, 'dusty-gray')
 );
 
