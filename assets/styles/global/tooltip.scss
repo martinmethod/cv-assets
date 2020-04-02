@@ -4,6 +4,7 @@
 // -------------------------|
 .tooltip {
   z-index: 10000;
+  outline: none;
 
   .desktop & {
     display: block !important;

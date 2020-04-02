@@ -76,6 +76,7 @@ $offset: rem(($roles-size-doc-icon * 1.8) + 5);
     width: 25px;
 
     @media (hover: hover) {
+      &:global(.open),
       .root:hover & {
         top: rem(2px);
         visibility: visible;
@@ -92,7 +93,7 @@ $offset: rem(($roles-size-doc-icon * 1.8) + 5);
       justify-content: center;
       font: map-get($roles-typo-font-weights, 'icon') 0.8em monospace;
       color: map-get($roles-col-texts, 'icon');
-      cursor: help;
+      cursor: pointer;
       background-color: map-get($roles-col-backgrounds, 'info');
       border: map-get($roles-borders-wrappers, 'negative');
       border-radius: rem(50%);

@@ -1,6 +1,9 @@
 <div :class="[$style.root, {[$style.document]: data.file, [$style.nfo]: data.tooltip, }]">
   <div v-if="data.tooltip" :class="$style.relBox">
-    <div :class="$style.info"><span v-tooltip.bottom="{ content: data.tooltip }">i</span></div>
+    <v-popover :class="$style.info" offset="5" placement="bottom">
+      <span>i</span>
+      <div slot="popover" v-html="data.tooltip" />
+    </v-popover>
   </div>
   <div v-if="data.file" :class="$style.relBox">
     <span :class="$style.file">
