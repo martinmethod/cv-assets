@@ -66,6 +66,14 @@ $offset: rem(($roles-size-doc-icon * 1.8) + 5);
   transition: all map-get($roles-transitions, 'icons') ease-in-out;
   transform: translateY(-50%) scale(0);
 
+  :global(.v--modal-overlay) .root & {
+    display: block;
+    top: rem(2px);
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
   @include mq-device-holding-type('outpocket') {
     position: absolute;
     top: rem(-20px);
@@ -82,6 +90,14 @@ $offset: rem(($roles-size-doc-icon * 1.8) + 5);
         visibility: visible;
         opacity: 1;
         transform: translateY(0) scale(1);
+      }
+
+      &:hover,
+      &:global(.open) {
+        span {
+          transform: scale(1.1);
+          box-shadow: rem(1px) rem(1px) rem(4px) map-get($swatch-colors-mono, 'dusty-gray');
+        }
       }
     }
 
@@ -100,13 +116,6 @@ $offset: rem(($roles-size-doc-icon * 1.8) + 5);
       box-shadow: rem(1px) rem(1px) rem(2px) map-get($swatch-colors-mono, 'alto');
       text-shadow: rem(1px) rem(1px) rem(1px) rgba(map-get($roles-col-texts, 'negative'), 0.8);
       transition: all map-get($roles-transitions, 'icons') ease-in-out;
-    }
-
-    &:hover {
-      span {
-        transform: scale(1.1);
-        box-shadow: rem(1px) rem(1px) rem(4px) map-get($swatch-colors-mono, 'dusty-gray');
-      }
     }
   }
 }
