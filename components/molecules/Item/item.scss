@@ -66,14 +66,6 @@ $offset: rem(($roles-size-doc-icon * 1.8) + 5);
   transition: all map-get($roles-transitions, 'icons') ease-in-out;
   transform: translateY(-50%) scale(0);
 
-  :global(.v--modal-overlay) .root & {
-    display: block;
-    top: rem(2px);
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-
   @include mq-device-holding-type('outpocket') {
     position: absolute;
     top: rem(-20px);
@@ -82,6 +74,14 @@ $offset: rem(($roles-size-doc-icon * 1.8) + 5);
     z-index: 1;
     display: block;
     width: 25px;
+
+    :global(.v--modal-overlay) .root & {
+      display: block;
+      top: rem(2px);
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
 
     @media (hover: hover) {
       &:global(.open),
