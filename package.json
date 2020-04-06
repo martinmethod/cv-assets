@@ -5,12 +5,12 @@
   "author": {
     "name": "Martin Metodiev",
     "email": "metodiev.martin@gmail.com",
-    "url": "http://martinmetodiev.com"
+    "url": "https://metodiev.dev"
   },
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "git://github.com/martinmethod/cv-assets.git"
+    "url": "git://github.com/methodev/cv-assets.git"
   },
   "private": true,
   "dependencies": {
