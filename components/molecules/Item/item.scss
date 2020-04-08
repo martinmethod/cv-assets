@@ -69,7 +69,7 @@ $offset: rem(($roles-size-doc-icon * 1.8) + 5);
   @include mq-device-holding-type('outpocket') {
     position: absolute;
     top: rem(-20px);
-    right: 0;
+    right: rem(5px);
     bottom: 0;
     z-index: 1;
     display: block;
