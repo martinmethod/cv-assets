@@ -68,7 +68,7 @@ $side-offset: $offset;
     position: relative;
   }
 
-  > div:nth-child(2) {
+  > section:nth-child(2) {
     @include padding-v(rem($curtain-offset));
     @include padding-h(rem($side-offset));
 

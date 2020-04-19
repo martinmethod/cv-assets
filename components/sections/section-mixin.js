@@ -28,7 +28,8 @@ export default {
     content: {
       type: Object,
       required: true
-    }
+    },
+    modal: Boolean
   },
 
   computed: {

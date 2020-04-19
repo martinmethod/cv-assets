@@ -1,4 +1,4 @@
-<div>
+<CustomScrollbar :style="{ height: '100vh' }">
   <div :class="[$style.root, { [$style.loading]: loading }]">
     <LangSwitcher
         v-if="locales.length > 1"
@@ -18,5 +18,4 @@
     <Footer :class="$style.footer" />
   </div>
   <Spinner :loading="loading" />
-</div>
-
+</CustomScrollbar>
