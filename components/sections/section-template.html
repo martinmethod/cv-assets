@@ -1,4 +1,4 @@
-<Section :class="$style.root" :heading="content.name" :tooltip="titleTooltip">
+<Section :class="$style.root" :heading="content.name" :tooltip="titleTooltip" :modal="modal">
   <template v-if="items.featured && items.regular">
     <div :class="$style.item" v-for="item in items.featured">
       <component :is="component" :data="item" />

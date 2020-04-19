@@ -5,7 +5,7 @@
       <i v-if="tooltip">{{ tooltip }}</i>
     </Heading>
   </div>
-  <div :class="$style.content">
+  <CustomScrollbar :disabled="!modal" :class="$style.content">
     <slot></slot>
-  </div>
+  </CustomScrollbar>
 </section>

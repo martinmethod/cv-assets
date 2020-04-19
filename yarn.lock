@@ -572,6 +572,11 @@ mkdirp@~0.5.1:
   dependencies:
     minimist "0.0.8"
 
+mobile-device-detect@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/mobile-device-detect/-/mobile-device-detect-0.3.3.tgz#6880f54c2e838d8dccbfc0d962d01a348db5faad"
+  integrity sha512-JOrQ2mwcBnEz/6hyvP/aXI8R03DnlwlQey7cukE6kCy9RLQbzchN5yMocEXuOw4NXdCsU6k7mEAolHwLxgPYwQ==
+
 moment-duration-format@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/moment-duration-format/-/moment-duration-format-2.3.2.tgz#5fa2b19b941b8d277122ff3f87a12895ec0d6212"
@@ -647,6 +652,11 @@ object.values@^1.1.0:
     es-abstract "^1.12.0"
     function-bind "^1.1.1"
     has "^1.0.3"
+
+perfect-scrollbar@^1.4.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/perfect-scrollbar/-/perfect-scrollbar-1.5.0.tgz#821d224ed8ff61990c23f26db63048cdc75b6b83"
+  integrity sha512-NrNHJn5mUGupSiheBTy6x+6SXCFbLlm8fVZh9moIzw/LgqElN5q4ncR4pbCBCYuCJ8Kcl9mYM0NgDxvW+b4LxA==
 
 popper.js@^1.16.0:
   version "1.16.1"
@@ -843,6 +853,14 @@ v-tooltip@^2.0.3:
     popper.js "^1.16.0"
     vue-resize "^0.4.5"
 
+vue-custom-scrollbar@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/vue-custom-scrollbar/-/vue-custom-scrollbar-1.1.0.tgz#731f4e014f02e6465a8fb623e4cae4735763c1bb"
+  integrity sha512-ZXf4Kjg7NZxVF6vo3OyXdueRkwHPp1qal+W08Ea6dJQcmm6FaCjJBrc6ukYbTEHMZHc2v8QNBpJg7pi4AYLhTA==
+  dependencies:
+    perfect-scrollbar "^1.4.0"
+    vue "^2.5.17"
+
 vue-div-100vh@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/vue-div-100vh/-/vue-div-100vh-0.1.2.tgz#95804f4d9f397ae013eb1631b1705bfc3ab77d0d"
@@ -871,7 +889,7 @@ vue-spinner@^1.0.3:
   resolved "https://registry.yarnpkg.com/vue-spinner/-/vue-spinner-1.0.3.tgz#eecd3f79f63a815b690e9d54b199ab65be695499"
   integrity sha512-Phh6QC/Bh80ZE/0SH9ADw4irbRGwFK6VZsTksPHpPm16xga2OXwNC2nI7SEPnndUZP+Lgu1wu+pbH6i6+5siBQ==
 
-vue@^2.6.11:
+vue@^2.5.17, vue@^2.6.11:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
 
