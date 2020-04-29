@@ -3,5 +3,7 @@
 
 // -------------------------| Root
 .root {
-  //
+  &:not(:global(.ps)) {
+    position: static;
+  }
 }
