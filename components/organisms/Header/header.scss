@@ -136,6 +136,8 @@
 
 // -------------------------| Contacts
 .contacts {
+  margin-top: rem(16px);
+
   @include mq-device-holding-type('inpocket') {
     > div {
       justify-content: center;
