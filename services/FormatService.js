@@ -29,7 +29,7 @@ export const formatDuration = (startDate, finalDate) => {
 
   if (!unit) { return; }
 
-  let period = moment(finalDate).diff(moment(startDate), unit);
+  let period = Math.ceil(moment(finalDate).diff(moment(startDate), unit, true));
   period = period >= ceil_units[unit].least && period < ceil_units[unit].top ? ceil_units[unit].top : period;
 
   return period % ceil_units[unit].top >= ceil_units[unit].rest || period % ceil_units[unit].top === 0 ? moment.duration(period, unit).humanize() : moment.duration(period, unit).format();
