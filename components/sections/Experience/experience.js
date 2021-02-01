@@ -48,7 +48,7 @@ export default {
         totalPeriod.add(duration);
       });
 
-      return totalPeriod.humanize();
+      return moment.duration(Math.ceil(totalPeriod.as('years')), 'years').humanize();
     }
   }
 };
