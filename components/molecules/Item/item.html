@@ -1,6 +1,6 @@
 <div :class="[$style.root, {[$style.document]: data.file, [$style.nfo]: data.tooltip, }]">
   <div v-if="data.tooltip" :class="$style.relBox">
-    <v-popover :class="$style.info" offset="5" placement="bottom">
+    <v-popover :class="$style.info" offset="5" placement="bottom" trigger="hover">
       <span>i</span>
       <div slot="popover" v-html="data.tooltip" />
     </v-popover>
