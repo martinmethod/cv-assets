@@ -95,26 +95,26 @@ $offset: rem(($roles-size-doc-icon * 1.8) + 5);
       &:hover,
       &:global(.open) {
         span {
-          transform: scale(1.1);
-          box-shadow: rem(1px) rem(1px) rem(4px) map-get($swatch-colors-mono, 'dusty-gray');
+          transform: scale(1.2);
         }
       }
     }
 
     span {
-      @include dimensions-square(rem(20px));
+      @include dimensions-square(rem(24px));
 
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font: map-get($roles-typo-font-weights, 'icon') 0.8em monospace;
+      margin-top: rem(-2px);
+      font-size: 1.2em;
+      font-weight: map-get($roles-typo-font-weights, 'icon');
       color: map-get($roles-col-texts, 'icon');
-      cursor: pointer;
-      background-color: map-get($roles-col-backgrounds, 'info');
+      cursor: default;
+      background: radial-gradient(ellipse at center, rgba(255,230,130,1) 25%,rgba(255,204,0,1) 100%,rgba(30,87,153,1) 100%);
       border: map-get($roles-borders-wrappers, 'negative');
       border-radius: rem(50%);
-      box-shadow: rem(1px) rem(1px) rem(2px) map-get($swatch-colors-mono, 'alto');
-      text-shadow: rem(1px) rem(1px) rem(1px) rgba(map-get($roles-col-texts, 'negative'), 0.8);
+      text-shadow: 0 0 rem(10px) rgba(map-get($roles-col-texts, 'negative'), 0.8);
       transition: all map-get($roles-transitions, 'icons') ease-in-out;
     }
   }
