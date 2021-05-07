@@ -15,7 +15,7 @@
   "private": true,
   "dependencies": {
     "contentful": "^7.14.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "mobile-device-detect": "^0.3.3",
     "moment": "^2.24.0",
     "moment-duration-format": "^2.3.2",
