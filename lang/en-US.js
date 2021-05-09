@@ -2,7 +2,7 @@ export default {
   switchLang: 'Превключете на',
   ongoing: 'Ongoing since',
   starting: 'Starting in',
-  openPDF: 'Open a PDF copy of this document',
+  openTheAttachedFile: 'Open the attached file: <br><strong>{0}</strong>',
   download: 'Download a PDF copy of this CV',
   totalExperience: 'of total experience',
   stack: 'Front-end stack',

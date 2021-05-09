@@ -100,12 +100,12 @@ export default {
 
         education: {
           ...expEdu,
-          file: document ? document.fields.file.url : null
+          document
         },
 
         courses: {
           ...expEdu,
-          file: document ? document.fields.file.url : null
+          document
         },
 
         references: {
