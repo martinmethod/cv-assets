@@ -19,7 +19,7 @@ const ceil_units = {
 };
 
 // -------------------------| Format date
-export const formatDate = (date, format = 'MMM YYYY') =>
+export const formatDate = (date, format = 'MMMM YYYY') =>
   moment(date).format(format);
 
 // -------------------------| Format duration
