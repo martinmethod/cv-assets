@@ -34,7 +34,7 @@ export default {
           label = `${this.$t('starting')}: ${formatDate(startDate)}`;
           break;
         case 'ongoing':
-          label = `${this.$t('ongoing')}: ${formatDate(startDate)}`;
+          label = `${this.$t('ongoing')} ${formatDate(startDate)}`;
           break;
         default:
           label = sameMonth
