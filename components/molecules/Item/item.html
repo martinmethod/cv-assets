@@ -7,7 +7,7 @@
   </div>
   <div v-if="data.document" :class="$style.relBox">
     <span :class="$style.file">
-      <DotButton color="red" :link="data.document.fields.file.url" :tooltip="$t('openTheAttachedFile', [data.document.fields.description])">
+      <DotButton color="red" :link="data.document.fields.file.url" :tooltip="$t('openTheAttachedDocument', [data.document.fields.description])">
         <FileSVG />
       </DotButton>
     </span>
