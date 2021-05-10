@@ -2,7 +2,7 @@
   <div :class="$style.cell">
     <div :class="[$style.cellContent, $style.main]">
       <Heading :size="1" :class="$style.title">{{ fullName }}</Heading>
-      <Heading type="subtitle" :class="$style.subtitle">{{ identity.headline }}</Heading>
+      <Heading type="info" :class="$style.subtitle">{{ identity.headline }}</Heading>
       <div :class="$style.contacts">
         <ContactGroup :items="meta" />
       </div>
