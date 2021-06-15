@@ -40,7 +40,9 @@
     color: map-get($roles-col-texts, 'base') !important;
   }
 
+  [role="tooltip"],
   [class*='ps__rail'] {
     display: none !important;
+    opacity: 0 !important;
   }
 }

@@ -34,9 +34,5 @@
   .root {
     flex: 1;
     column-gap: $gap;
-
-    > section:not(:last-child) {
-      margin-bottom: rem(24px);
-    }
   }
 }
