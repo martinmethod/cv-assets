@@ -30,6 +30,7 @@ $radius: map-get($swatch-border-radiuses, 'circle');
   width: 100%;
   height: rem($size);
   border-radius: map-get($roles-borders-radiuses, 'tag');
+  background-color: rgba(map-get($roles-col-links, 'link'), 0.08);
 }
 
 // -------------------------| Colors
