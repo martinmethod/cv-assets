@@ -64,10 +64,22 @@
     border-top: 0;
 
     i {
+      @include padding-v(rem(4px));
+
+      position: relative;
       display: block;
-      padding-top: rem(13px);
-      margin-top: rem(13px);
-      border-top: map-get($roles-borders-dividers, 'gray');
+      margin-top: rem(13px * 2);
+      background: map-get($swatch-colors-mono, 'pale');
+      border-radius: rem(13px);
+
+      &::before {
+        content: ' ';
+        position: absolute;
+        top: rem(-13px);
+        display: block;
+        width: 100%;
+        border-top: map-get($roles-borders-dividers, 'gray');
+      }
     }
 
     a {

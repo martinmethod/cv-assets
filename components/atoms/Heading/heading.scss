@@ -11,9 +11,12 @@
 
     right: 0;
     display: none;
+    padding: rem(4px) rem(12px);
     margin-bottom: rem(6.5px);
+    border-radius: rem(13px);
     font-size: map-get($roles-typo-font-sizes, 'body');
     font-weight: map-get($roles-typo-font-weights, 'info');
+    background: map-get($swatch-colors-mono, 'pale');
     color: map-get($roles-col-texts, 'meta');
   }
 }
