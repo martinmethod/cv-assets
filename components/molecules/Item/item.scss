@@ -49,6 +49,10 @@ $offset: rem(($roles-size-doc-icon * 1.8) + 5);
 .details {
   margin-top: rem(6.5px);
   font-size: map-get($roles-typo-font-sizes, 'details');
+
+  a {
+    white-space: nowrap;
+  }
 }
 
 // -------------------------| Relative box

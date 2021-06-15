@@ -33,9 +33,7 @@
   <MetaGroup :items="data.details" />
   <div v-if="data.text" :class="$style.details">
     <Paragraph>
-      <p v-for="(text, i) in data.text" :key="i">
-        {{ text }}
-      </p>
+      <p v-for="(text, i) in data.text" :key="i" v-html="text" />
     </Paragraph>
   </div>
 </div>
