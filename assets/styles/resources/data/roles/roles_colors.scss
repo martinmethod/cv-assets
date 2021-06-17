@@ -44,6 +44,5 @@ $roles-col-buttons: (
 $roles-col-backgrounds: (
   'app': map-get($swatch-backgrounds, 'white'),
   'tooltip': map-get($swatch-backgrounds, 'mine-shaft'),
-  'progress': map-get($swatch-backgrounds, 'pale'),
-  'bar': map-get($swatch-backgrounds, 'casal')
+  'progress': map-get($swatch-backgrounds, 'pale')
 );

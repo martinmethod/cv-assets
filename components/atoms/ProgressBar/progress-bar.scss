@@ -9,14 +9,12 @@ $min-height: 24px;
   position: relative;
   display: block;
   width: 100%;
-  min-height: em($min-height);
   padding-top: 1 / map-get($roles-ratios, 'progress-bar') * 100%;
-  pointer-events: none;
-  background-color: map-get($roles-col-backgrounds, 'progress');
+  user-select: none;
   border: map-get($roles-borders-wrappers, 'progress-bar');
   border-radius: map-get($roles-borders-radiuses, 'progress');
 
-  > div {
+  > * {
     $gap: 2px;
 
     position: absolute;
@@ -25,7 +23,6 @@ $min-height: 24px;
     bottom: $gap;
     left: $gap;
     height: calc(100% - #{$gap * 2});
-    min-height: em($min-height - (($gap + 2) * 2));
 
     > span {
       @util truncate;
@@ -35,11 +32,28 @@ $min-height: 24px;
       padding: 0 em(8px);
       font-weight: map-get($roles-typo-font-weights, 'progress-bar');
       line-height: map-get($roles-typo-line-heights, 'progress-bar');
-      color: map-get($roles-col-texts, 'negative');
+      color: map-get($roles-col-texts, 'base');
       text-align: left;
       text-transform: uppercase;
-      background-color: map-get($roles-col-backgrounds, 'bar');
+      letter-spacing: 1px;
+      background-color: dark(map-get($roles-col-backgrounds, 'progress'), 5%);
       border-radius: map-get($roles-borders-radiuses, 'progress');
+      transition: all map-get($roles-transitions, 'link') ease-in-out;
+    }
+
+    &[href] {
+      &:hover {
+        > span {
+          background-color: map-get($roles-col-links, 'hover');
+          color: map-get($roles-col-texts, 'negative');
+        }
+      }
+
+      &:active {
+        > span {
+          background-color: map-get($roles-col-links, 'active');
+        }
+      }
     }
   }
 }
