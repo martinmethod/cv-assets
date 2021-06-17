@@ -1,7 +1,7 @@
 <div :class="$style.root">
-  <div>
+  <component :is="barComponent.element" v-bind="barComponent.attrs">
       <span :style="{ width: `${level}%` }">
         <span v-if="label">{{ label }}</span>
       </span>
-  </div>
+  </component>
 </div>

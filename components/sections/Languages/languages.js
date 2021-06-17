@@ -16,15 +16,19 @@ export default {
     };
   },
 
+  computed: {
+    items() {
+      const active_native_locale = this.content.items.find(({ fields }) => !!fields.native).fields.locale === this.$i18n.locale;
+
+      return this.content.items.map((item) =>
+          this.modifyItem(item)
+      ).filter(({ locale }) => active_native_locale ? locale !== this.$i18n.locale : true);
+    }
+  },
+
   methods: {
     modifyItem({ fields }) {
-      const { name, level, label } = fields;
-
-      return {
-        name,
-        level,
-        label
-      };
+      return fields;
     }
   }
 };
