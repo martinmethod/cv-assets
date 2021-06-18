@@ -22,6 +22,7 @@ export default {
     await store.dispatch('contentful/fetchContent', {
       locale: app.i18n.locale
     });
+    store.dispatch('core/setFlagForActiveNativeLocale');
   },
 
   computed: mapState({
