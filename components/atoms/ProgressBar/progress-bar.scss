@@ -9,13 +9,14 @@ $min-height: 24px;
   position: relative;
   display: block;
   width: 100%;
+  height: rem(18px);
   padding-top: 1 / map-get($roles-ratios, 'progress-bar') * 100%;
   user-select: none;
   border: map-get($roles-borders-wrappers, 'progress-bar');
   border-radius: map-get($roles-borders-radiuses, 'progress');
 
   > * {
-    $gap: 2px;
+    $gap: 1px;
 
     position: absolute;
     top: $gap;
@@ -27,15 +28,16 @@ $min-height: 24px;
     > span {
       @util truncate;
 
-      display: block;
+      display: flex;
+      align-items: center;
       height: 100%;
       padding: 0 em(8px);
       font-weight: map-get($roles-typo-font-weights, 'progress-bar');
-      line-height: map-get($roles-typo-line-heights, 'progress-bar');
+      line-height: 0;
       color: map-get($roles-col-texts, 'base');
       text-align: left;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: em(0.8px);
       background-color: dark(map-get($roles-col-backgrounds, 'progress'), 5%);
       border-radius: map-get($roles-borders-radiuses, 'progress');
       transition: all map-get($roles-transitions, 'link') ease-in-out;

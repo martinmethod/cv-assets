@@ -7,7 +7,6 @@ $swatch-borders: (
   '1px-solid-alpha': 1px solid transparent,
   '1px-solid-white': 1px solid map-get($swatch-colors-mono, 'white'),
   '1px-dashed-gray': 1px dashed map-get($swatch-colors-mono, 'alto'),
-  '1px-solid-alto': 1px solid map-get($swatch-colors-mono, 'alto'),
   '2px-solid-dusty-gray': 2px solid map-get($swatch-colors-mono, 'dusty-gray'),
   '3px-double-dusty-gray': 3px double
     map-get($swatch-colors-mono, 'dusty-gray')
@@ -16,6 +15,5 @@ $swatch-borders: (
 // -------------------------| Radiuses
 $swatch-border-radiuses: (
   'circle': 50%,
-  'oval3': 3px,
-  'oval-round': 1rem
+  'oval3': 3px
 );
