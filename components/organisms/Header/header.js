@@ -55,13 +55,13 @@ export default {
     },
 
     links() {
-      const { homePage, portfolio } = this.identity;
+      const { homePage, portfolio, icon } = this.identity;
       const links = [];
 
       if (homePage) {
         links.push({
           id: 'homepage',
-          icon: HomeSVG,
+          icon: icon ? icon.fields.file.url : HomeSVG,
           value: homePage.replace('http://', '').replace('https://', ''),
           link: homePage
         });
