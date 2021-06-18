@@ -68,13 +68,12 @@ export default {
 
       if (this.accounts) {
         this.accounts.forEach((acc) => {
-          const { id, username, url, icon } = acc.fields;
+          const { id, url, icon } = acc.fields;
 
           links.push({
             id,
             icon: icon.fields.file.url,
-            value: username,
-            printValue: url.replace('http://', '').replace('https://', ''),
+            value: url.replace('http://', '').replace('https://', ''),
             link: url
           });
         });
