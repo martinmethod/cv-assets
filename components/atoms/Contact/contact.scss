@@ -35,10 +35,6 @@
   }
 }
 
-.portfolio {
-  //
-}
-
 .behance {
   svg {
     fill: map-get($roles-col-icons, 'behance');
@@ -64,17 +60,4 @@
   display: inline-block;
   margin-right: rem(4px);
   transform: translateY(rem(2.6px));
-}
-
-// -------------------------| Print value
-.print-value {
-  display: none;
-
-  @media print {
-    display: inline;
-
-    + .value {
-      display: none;
-    }
-  }
 }

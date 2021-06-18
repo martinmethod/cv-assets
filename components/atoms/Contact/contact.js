@@ -17,9 +17,6 @@ export default {
       type: String,
       required: true
     },
-    printValue: {
-      type: String
-    },
     link: {
       type: String
     }
