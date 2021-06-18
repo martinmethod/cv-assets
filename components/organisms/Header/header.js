@@ -13,7 +13,6 @@ import AtSVG from '@/node_modules/cv-assets/assets/graphics/at.svg';
 import HomeSVG from '@/node_modules/cv-assets/assets/graphics/home.svg';
 import PhoneSVG from '@/node_modules/cv-assets/assets/graphics/phone.svg';
 import PinSVG from '@/node_modules/cv-assets/assets/graphics/pin.svg';
-import PortfolioSVG from '@/node_modules/cv-assets/assets/graphics/portfolio.svg';
 
 export default {
   components: { Avatar, Heading, ContactGroup },
@@ -55,7 +54,7 @@ export default {
     },
 
     links() {
-      const { homePage, portfolio, icon } = this.identity;
+      const { homePage, icon } = this.identity;
       const links = [];
 
       if (homePage) {
@@ -64,16 +63,6 @@ export default {
           icon: icon ? icon.fields.file.url : HomeSVG,
           value: homePage.replace('http://', '').replace('https://', ''),
           link: homePage
-        });
-      }
-
-      if (portfolio) {
-        links.push({
-          id: 'portfolio',
-          icon: PortfolioSVG,
-          value: 'portfolio',
-          printValue: `portfolio.${homePage.replace('http://', '').replace('https://', '')}`,
-          link: portfolio
         });
       }
 
