@@ -21,12 +21,15 @@ export default {
   computed: {
     ...mapState({
       identity: ({ contentful }) => contentful.data.identity.fields,
-      accounts: ({ contentful }) => contentful.data.accounts
+      accounts: ({ contentful }) => contentful.data.accounts,
+      native_locale: ({ core }) => core.native_locale
     }),
+
     fullName() {
       const { firstName, lastName } = this.identity;
       return `${firstName} ${lastName}`;
     },
+
     meta() {
       const { email, phone, city, country } = this.identity;
 
@@ -45,11 +48,12 @@ export default {
         {
           id: 'location',
           icon: PinSVG,
-          value: `${city}, ${country}`,
+          value: `${city}${ this.native_locale ? '' : ', ' + country}`,
           link: `https://www.google.com/maps/search/?query=${city}+${country}`
         }
       ];
     },
+
     links() {
       const { homePage, portfolio } = this.identity;
       const links = [];
