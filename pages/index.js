@@ -48,7 +48,7 @@ export default {
 
     if (process.client) {
       const device = isMobile ? 'mobile' : 'desktop';
-      document.body.classList.add(device);
+      window.document.body.classList.add(device);
     }
   }
 };
