@@ -3,6 +3,7 @@
   :class="[$style.root, $style[color], $style[display]]"
   :href="link"
   :target="link ? '_blank' : null"
+  :rel="link ? 'noreferrer nofollow' : null"
   v-tooltip.left="{content: tooltip}"
   @click="$emit('click')"
 >

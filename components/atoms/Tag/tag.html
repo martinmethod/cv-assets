@@ -3,6 +3,7 @@
     :is="wrapper"
     :href="data.website"
     :target="data.website ? '_blank' : null"
+    :rel="data.website ? 'noreferrer' : null"
   >
     <template v-if="data.description || data.experience">
       <v-popover offset="5" placement="top" trigger="hover">
