@@ -24,7 +24,8 @@ export default {
         attrs: {
           ['data-btn']: true,
           href: this.hyperlink,
-          target: '_blank'
+          target: '_blank',
+          rel: 'noreferrer'
         }
       } : {
         element: 'div',

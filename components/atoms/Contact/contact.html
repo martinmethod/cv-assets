@@ -1,5 +1,5 @@
 <span :class="[$style.root, $style[id]]">
-  <component :is="wrapper" :href="link" :target="link && (link.indexOf('//') !== -1 ? '_blank' : false)">
+  <component :is="wrapper" :href="link" :target="link && (link.indexOf('//') !== -1 ? '_blank' : false)" :rel="link && (link.indexOf('//') !== -1 ? 'noreferrer' : null)">
     <Icon :class="$style.icon" :src="icon" />
     <span :class="$style.value">{{ value }}</span>
   </component>

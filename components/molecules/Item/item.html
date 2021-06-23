@@ -17,6 +17,7 @@
       :is="headingWrapper(data.titleUrl)"
       :href="data.titleUrl"
       :target="data.titleUrl && (data.titleUrl.indexOf('//') !== -1 ? '_blank' : null)"
+      :rel="data.titleUrl && (data.titleUrl.indexOf('//') !== -1 ? 'noreferrer' : null)"
     >
       <span>{{ data.title }}</span>
     </component>
@@ -26,6 +27,7 @@
       :is="headingWrapper(data.subtitleUrl)"
       :href="data.subtitleUrl"
       :target="data.subtitleUrl && (data.subtitleUrl.indexOf('//') !== -1 ? '_blank' : null)"
+      :rel="data.subtitleUrl && (data.subtitleUrl.indexOf('//') !== -1 ? 'noreferrer' : null)"
     >
       {{ data.subtitle }}
     </component>
