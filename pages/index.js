@@ -9,19 +9,12 @@ import { isMobile } from 'mobile-device-detect';
 import sections from '@/node_modules/cv-assets/components/sections';
 
 export default {
-  head({ $i18n, $store }) {
+  head({ $i18n }) {
     return {
       htmlAttrs: {
         lang: $i18n.locale
       },
-      title: this.title,
-      link: [
-        {
-          rel: 'preload',
-          as: 'image',
-          href: $store.state.contentful.data.identity.fields.avatar
-        }
-      ]
+      title: this.title
     };
   },
 
